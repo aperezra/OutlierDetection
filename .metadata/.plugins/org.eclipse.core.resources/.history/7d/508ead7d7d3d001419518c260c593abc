@@ -1,0 +1,65 @@
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+
+public class Main {
+
+
+	public static void main(String[] args) throws IOException{
+		FileManager rf = new FileManager();
+		File[] directories = rf.listDirectories("/Users/alvaro/Documents/TUGraz/Master Thesis/Prueba/");
+
+		//Code that creates the Training Set, getting randomly 200 files from the data set.
+		/*List<Integer> used = new ArrayList<Integer>();
+		int i = 0;
+		while(i<201){
+			int index = (int) Math.floor(Math.random()*directories.length);
+			if(!used.contains(index) && !directories[index].getName().contains("_")){
+				used.add(index);		
+				String destFile ="/Users/alvaro/Documents/TUGraz/Master Thesis/TrainingSet/"+directories[index].getName();
+				rf.copyFile(directories[index], new File(destFile));
+				i++;
+				//System.out.println(directorios[index].getName());
+			}
+		}*/
+
+		//
+		for (int i=0; i<directories.length;i++){
+			if(!directories[i].getName().equals(".DS_Store")){
+				rf.parse(directories[i]);
+			}
+		}
+
+		for (String key: rf.getData().keySet()){
+			List<Integer> data = rf.getData().get(key);
+			System.out.print(key);
+			for(int i:data){
+				System.out.print(i+" ");
+			}
+			System.out.println();
+
+
+			Algorithms knn = new Algorithms (data.get(rf.getData().get(key).size()-1));	
+			DescriptiveStats stat = new DescriptiveStats(rf.getData().get(key));
+			int mean = stat.getMean();
+			System.out.println(" mean: "+mean);
+			double density =knn.densityX(data, mean, data.get(0));
+			System.out.println ( " densidad: " +density);
+
+
+			//			DescriptiveStats stat = new DescriptiveStats(rf.getData().get(key));
+			//			System.out.println(key);
+			//			System.out.println("Min = " + stat.getMin());
+			//			System.out.println("Max = " + stat.getMax());
+			//			System.out.println("Median = " + stat.getMedian());
+			//			int mean = stat.getMean();
+			//			System.out.println("Mean = " + mean);
+			//			System.out.println("Standard Deviation = " + stat.getStandardDev(mean));
+
+		}
+
+	}
+
+}

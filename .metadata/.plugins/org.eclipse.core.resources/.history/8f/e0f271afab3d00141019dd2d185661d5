@@ -1,0 +1,95 @@
+
+
+import java.util.List;
+
+/**
+ * The Class Algorithms. 
+ *
+ * @author Alvaro Perez Ramon
+ */
+public class Knn implements Algorithm{
+
+	/** The value. */
+	public int value;
+
+	/**
+	 * Instantiates a new algorithms.
+	 */
+	public Knn() {
+		super();
+	}
+	/**
+	 * Instantiates a new algorithms.
+	 *
+	 * @param value the value
+	 */
+	public Knn(int value) {
+		super();
+		this.value = value;
+	}
+
+	/**
+	 * Gets the value.
+	 *
+	 * @return the value
+	 */
+	public int getValue() {
+		return value;
+	}
+
+	/**
+	 * Sets the value.
+	 *
+	 * @param value the new value
+	 */
+	public void setValue(int value) {
+		this.value = value;
+	}
+
+	/**
+	 * Distance.
+	 *
+	 * @param neighbour the neighbour
+	 * @return the int
+	 */
+	@Override
+	public int distance(int reference, int val) {
+		int distance = Math.abs(val-reference);
+		return distance;
+	}
+	
+	@Override
+	public double rof() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	/**
+	 * Calculates the distance from a point to all the other points in the list.
+	 *
+	 * @param data the data
+	 */
+	public void knn(List<Integer> data){
+		System.out.print("Calculo respecto a " + this.value + ":");
+		for(int val: data){
+			int distance = distance(val, this.value);		
+		}
+		System.out.println();
+	}
+	
+	/**
+	 * Calculates the distance from a point to the k previous points.
+	 *
+	 * @param data the data
+	 * @param k the number of neighbors to calculate
+	 */
+	public void knn(List<Integer> data, int k){
+		for(int i=(data.size()-k-1); i<(data.size()-1); i++){
+			int distance = distance(data.get(i),this.value);			
+		}
+	}
+
+	
+
+
+}

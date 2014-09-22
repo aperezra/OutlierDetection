@@ -1,0 +1,28 @@
+import java.io.File;
+
+
+public class Main {
+	
+	
+	public static void main(String[] args){
+		ReadFile rf = new ReadFile();
+		File[] directorios = rf.listarDirectorios();
+		
+		for (int i=0; i<directorios.length;i++){
+			if(!directorios[i].getName().equals(".DS_Store")){
+				rf.parse(directorios[i]);
+				//Algorithms knn = new Algorithms(87);
+				//knn.knn(rf.getData());
+			}
+		}
+		for (String key: rf.getData().keySet()){
+			for(Integer visit: rf.getData().get(key)){
+				System.out.println("tiriri");
+				System.out.print("La página "+key+" tiene " +visit+" visitas.");
+			}
+			System.out.println();
+			
+		}
+
+	}
+}

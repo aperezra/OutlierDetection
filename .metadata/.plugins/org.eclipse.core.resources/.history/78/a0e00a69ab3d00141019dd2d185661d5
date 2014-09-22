@@ -1,0 +1,20 @@
+
+/**
+ * The Interface Algorithm.
+ */
+public interface Algorithm {
+	
+	/**
+	 * Distancia.
+	 *
+	 * @return the int
+	 */
+	int distance(int reference, int val);
+	
+	/**
+	 * Rof.
+	 *
+	 * @return the int
+	 */
+	int rof();
+}

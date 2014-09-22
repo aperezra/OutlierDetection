@@ -1,0 +1,89 @@
+import java.util.*;
+/**
+ * Read from a standard input a series of exam scores,    
+ * then compute the min, max, avg, med, & stand deviation.
+ */
+public class DescriptiveStats
+{
+
+	Queue<Integer> scores; 
+
+
+	public DescriptiveStats(Queue<Integer> scores) {
+		this.scores = scores;
+	}
+
+
+
+
+
+	public Queue<Integer> getScores() {
+		return scores;
+	}
+
+
+	public void setScores(Queue<Integer> scores) {
+		this.scores = scores;
+	}
+
+
+	public int getMin()
+	{
+		int min = scores.peek();
+		for(int i: scores){      
+			if(min>i){
+				min=i;
+			}
+		}
+		return min;
+	}
+
+	public int getMax()
+	{
+		int max = scores.peek();
+		for(int i: scores){
+			if(max<i)
+				max=i;
+		}
+		return max;
+	}
+
+//	public int getMedian()
+//	{
+//		Collections.sort(scores);
+//		int middle = scores.size()/2;
+//		if(scores.size()%2==1){
+//			return scores.get(middle);
+//		}
+//		return (scores.get(middle-1) + scores.get(middle));
+//	}
+
+
+	public int getMean()
+	{
+
+		int mean = 0;
+		int sum = 0;
+		for(int i: scores){
+			sum += i;
+		}
+		mean = sum/scores.size();
+		return mean;
+	}
+
+	public double getStandardDev(int m)
+	{
+		int mean = m;
+		double result =0;
+		double total = 0;
+		for(int i: scores){
+			result += Math.pow(i-mean,2);
+			
+
+		}
+		total = result/scores.size();
+		double standev = Math.sqrt(total);
+		return standev;
+	}
+
+}
