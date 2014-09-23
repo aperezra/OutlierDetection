@@ -1,12 +1,13 @@
 import java.io.File;
 import java.io.IOException;
-import java.util.List;
-
+import java.util.Deque;
+import Algorithms.*;
 
 public class Main {
-
+	
 
 	public static void main(String[] args) throws IOException{
+		Info info = new Info();
 		FileManager rf = new FileManager();
 		File[] directories = rf.listDirectories("/Users/alvaro/Documents/TUGraz/Master Thesis/Prueba/");
 
@@ -25,12 +26,12 @@ public class Main {
 		//listing all the directories in the dataset
 		for (int i=0; i<directories.length;i++){
 			if(!directories[i].getName().equals(".DS_Store")){
-				rf.parse(directories[i]);
+				rf.parse(directories[i],info);
 			}
 		}
 
-		for (String key: rf.getData().keySet()){
-			List<Integer> data = rf.getData().get(key);
+		for (String key: info.getInfo().keySet()){
+			Deque<Integer> data = info.getInfo().get(key);
 			System.out.print(key+" has these visits: ");
 			for(int i:data){
 				System.out.print(i+" ");
@@ -38,21 +39,20 @@ public class Main {
 			System.out.println();
 
 			Density density =new Density();
-			//Knn knn = new Knn();
-			DescriptiveStats stat = new DescriptiveStats(rf.getData().get(key));
-			int mean = stat.getMean();
-			System.out.println(" mean: "+mean);
+			Knn knn = new Knn();
+			//DescriptiveStats stat = new DescriptiveStats(info.getInfo().get(key));
+			//int mean = stat.getMean();
+			//System.out.println(" mean: "+mean);
 			System.out.println("data size: " + data.size());
-			for (int i=0; i<data.size(); i++){
-				//knn.knnX(data,data.get(i), i);
-				density.densityX(data, mean, data.get(i), i);
-				//System.out.print(knn.getDistances().get(i) +" | ");
-				System.out.print(density.getDensities().get(i) + " | ");
+			for (int i: data){
+				knn.knnX(data, i);
+				//density.densityX(data, density.getDensities(), i);
+				//System.out.print(density.getDensities().get(i) + " | ");
 			}
 			System.out.println();
 			for (int i=0; i<data.size(); i++){
-				System.out.print(density.ros(i)+ " | ");
-				//System.out.print(knn.ros(i) +" | ");
+				//System.out.print(density.ros(i)+ " | ");
+				System.out.print(knn.getDistances().get(i) +" | ");
 			}
 
 			System.out.println();

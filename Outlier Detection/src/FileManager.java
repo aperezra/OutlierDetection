@@ -5,9 +5,10 @@ import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.nio.channels.FileChannel;
-import java.util.ArrayList;
+import java.util.ArrayDeque;
+import java.util.Deque;
 import java.util.HashMap;
-import java.util.List;
+
 
 
 
@@ -20,44 +21,44 @@ import java.util.List;
 public class FileManager {
 
 
-	/** The data. 
-	 * @return */
-	public HashMap<String, List<Integer>> data;
-
-
-	/**
-	 * Instantiates a new read file.
-	 */
-	public FileManager() {
-		super();
-
-		this.data = new HashMap<String, List<Integer>>();
-	}
-
-	/**
-	 * Gets the data.
-	 *
-	 * @return the data
-	 */
-	public HashMap<String, List<Integer>> getData() {
-		return data;
-	}
-
-	/**
-	 * Sets the data.
-	 *
-	 * @param data the data
-	 */
-	public void setData(HashMap<String, List<Integer>> data) {
-		this.data = data;
-	}
+//	/** The data. 
+//	 * @return */
+//	public Info info;
+//
+//
+//	/**
+//	 * Instantiates a new read file.
+//	 */
+//	public FileManager() {
+//		super();
+//		HashMap<String, Deque<Integer>>  map= new HashMap<String, Deque<Integer>>();
+//		this.info= new Info(map);
+//	}
+//
+//	/**
+//	 * Gets the data.
+//	 *
+//	 * @return the data
+//	 */
+//	public Info getData() {
+//		return info;
+//	}
+//
+//	/**
+//	 * Sets the data.
+//	 *
+//	 * @param data the data
+//	 */
+//	public void setData(Info info) {
+//		this.info = info;
+//	}
 
 	/**
 	 * Parses each file, storing the code and name of the wikipage as the key of the multimap, and the visits as its value.
 	 *
 	 * @param file the file
 	 */
-	public void parse(File file){
+	public void parse(File file, Info info){
 		FileReader fr = null;
 		BufferedReader br = null;
 		//File file = null;
@@ -74,14 +75,14 @@ public class FileManager {
 				String key = (partes[0] +" "+ partes[1]);
 				int visits = Integer.parseInt(partes[2]);
 
-				if (!data.containsKey(key)){
-					List<Integer> values = new ArrayList<Integer>();
-					values.add(visits);
-					data.put(key, values);
+				if (!info.getInfo().containsKey(key)){
+					Deque<Integer> values = new ArrayDeque<Integer>();
+					values.offerFirst(visits);
+					info.getInfo().put(key, values);
 				}
 				else{
-					data.get(key).add(visits);
-					data.put(key, data.get(key));
+					info.getInfo().get(key).offerFirst(visits);
+					info.getInfo().put(key, info.getInfo().get(key));
 
 				}
 			}
@@ -107,7 +108,7 @@ public class FileManager {
 	}
 
 	/**
-	 * List directorioes.
+	 * List directories.
 	 *
 	 * @return the file[]
 	 */

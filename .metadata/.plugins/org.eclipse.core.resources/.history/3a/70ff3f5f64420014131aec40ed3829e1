@@ -1,0 +1,23 @@
+import java.util.HashMap;
+import java.util.Queue;
+
+
+public class Info {
+
+	public HashMap<String, Queue<Integer>> info;
+
+	public Info(HashMap<String, Queue<Integer>> info) {
+		super();
+		this.info = info;
+	}
+
+	public HashMap<String, Queue<Integer>> getInfo() {
+		return info;
+	}
+
+	public void setInfo(HashMap<String, Queue<Integer>> info) {
+		this.info = info;
+	} 
+	
+	
+}
