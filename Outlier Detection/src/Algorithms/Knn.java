@@ -1,6 +1,7 @@
 package Algorithms;
 
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Deque;
 import java.util.List;
@@ -61,15 +62,15 @@ public class Knn implements Algorithm{
 
 	@Override
 	public double ros(int index) {
-		DescriptiveStats stats = new DescriptiveStats(distances);
-		double dev = stats.getStandardDev(stats.getMean());
-		return dev;
-		//		double ros = 0;
-		
-//		if(max!=0){
-//			ros = (distances.get(index)/max);
-//		}
-//		return ros;
+//		DescriptiveStats stats = new DescriptiveStats(distances);
+//		double dev = stats.getStandardDev(stats.getMean());
+//		return dev;
+//		//		double ros = 0;
+//		
+////		if(max!=0){
+////			ros = (distances.get(index)/max);
+////		}
+		return 0.0;
 	}
 	
 
@@ -80,7 +81,7 @@ public class Knn implements Algorithm{
 	 */
 	public void knnX(Deque<Integer> data, int x){
 		double max=0;
-		List<Integer> dist = new ArrayList<Integer>();
+		Deque<Integer> dist = new ArrayDeque<Integer>();
 		for(int i: data){
 			dist.add(distance(i,x));		
 		}

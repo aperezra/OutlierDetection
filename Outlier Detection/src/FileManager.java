@@ -6,8 +6,9 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.nio.channels.FileChannel;
 import java.util.ArrayDeque;
+import java.util.ArrayList;
 import java.util.Deque;
-import java.util.HashMap;
+import java.util.List;
 
 
 
@@ -21,44 +22,44 @@ import java.util.HashMap;
 public class FileManager {
 
 
-//	/** The data. 
-//	 * @return */
-//	public Info info;
-//
-//
-//	/**
-//	 * Instantiates a new read file.
-//	 */
-//	public FileManager() {
-//		super();
-//		HashMap<String, Deque<Integer>>  map= new HashMap<String, Deque<Integer>>();
-//		this.info= new Info(map);
-//	}
-//
-//	/**
-//	 * Gets the data.
-//	 *
-//	 * @return the data
-//	 */
-//	public Info getData() {
-//		return info;
-//	}
-//
-//	/**
-//	 * Sets the data.
-//	 *
-//	 * @param data the data
-//	 */
-//	public void setData(Info info) {
-//		this.info = info;
-//	}
+	//	/** The data. 
+	//	 * @return */
+	//	public Info info;
+	//
+	//
+	//	/**
+	//	 * Instantiates a new read file.
+	//	 */
+	//	public FileManager() {
+	//		super();
+	//		HashMap<String, Deque<Integer>>  map= new HashMap<String, Deque<Integer>>();
+	//		this.info= new Info(map);
+	//	}
+	//
+	//	/**
+	//	 * Gets the data.
+	//	 *
+	//	 * @return the data
+	//	 */
+	//	public Info getData() {
+	//		return info;
+	//	}
+	//
+	//	/**
+	//	 * Sets the data.
+	//	 *
+	//	 * @param data the data
+	//	 */
+	//	public void setData(Info info) {
+	//		this.info = info;
+	//	}
 
 	/**
 	 * Parses each file, storing the code and name of the wikipage as the key of the multimap, and the visits as its value.
 	 *
 	 * @param file the file
 	 */
-	public void parse(File file, Info info){
+	public synchronized void parse(File file, Info info){
 		FileReader fr = null;
 		BufferedReader br = null;
 		//File file = null;
@@ -67,27 +68,26 @@ public class FileManager {
 			// Opening the file and creating a BufferedReader that allows to parse all the text included in the file
 			fr = new FileReader (file);
 			br = new BufferedReader(fr);
-
 			// Reading the file
 			String line;
-			while((line=br.readLine())!=null){
-				String[] partes = line.split("\\s+");
-				String key = (partes[0] +" "+ partes[1]);
-				int visits = Integer.parseInt(partes[2]);
+			if(!file.getName().equals(".DS_Store") || !file.getName().contains(".")){
+				while((line=br.readLine())!=null){
+					String[] partes = line.split("\\s+");
+					String key = (partes[0] +" "+ partes[1]);
+					int visits = Integer.parseInt(partes[2]);
+					if (!info.getInfo().containsKey(key)){
+						Deque<Integer> values = new ArrayDeque<Integer>();
+						values.offerFirst(visits);
+						info.getInfo().put(key, values);
+					}
+					else{
+						info.getInfo().get(key).offerFirst(visits);
+						info.getInfo().put(key, info.getInfo().get(key));
 
-				if (!info.getInfo().containsKey(key)){
-					Deque<Integer> values = new ArrayDeque<Integer>();
-					values.offerFirst(visits);
-					info.getInfo().put(key, values);
+					}
 				}
-				else{
-					info.getInfo().get(key).offerFirst(visits);
-					info.getInfo().put(key, info.getInfo().get(key));
 
-				}
 			}
-
-
 
 		}
 		catch(Exception e){
@@ -112,9 +112,17 @@ public class FileManager {
 	 *
 	 * @return the file[]
 	 */
-	public File[] listDirectories(String sourceDirectory){
+	public List<File> listDirectories(String sourceDirectory){
 		File f = new File(sourceDirectory);
-		File[] files = f.listFiles();
+		File[] filesIni = f.listFiles();
+		List<File> files = new ArrayList<File>();
+		//To filter hidden files from the directory.
+		for(File file: filesIni){
+			if(!file.isHidden()){
+				files.add(file);
+			}
+			
+		}
 		return files;
 
 
