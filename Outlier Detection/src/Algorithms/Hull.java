@@ -21,7 +21,8 @@ public class Hull implements Algorithm{
 
 
 	@Override	
-	public double ros(int numHull) {
+	public double ros() {
+		double numHull=0;
 		return numHull;
 
 	}

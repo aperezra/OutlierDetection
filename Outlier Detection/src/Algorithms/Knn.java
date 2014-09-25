@@ -61,7 +61,7 @@ public class Knn implements Algorithm{
 	
 
 	@Override
-	public double ros(int index) {
+	public double ros() {
 //		DescriptiveStats stats = new DescriptiveStats(distances);
 //		double dev = stats.getStandardDev(stats.getMean());
 //		return dev;

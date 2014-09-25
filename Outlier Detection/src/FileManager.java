@@ -59,11 +59,10 @@ public class FileManager {
 	 *
 	 * @param file the file
 	 */
-	public synchronized void parse(File file, Info info){
+	public void parse(File file, Info info){
 		FileReader fr = null;
 		BufferedReader br = null;
 		//File file = null;
-
 		try {
 			// Opening the file and creating a BufferedReader that allows to parse all the text included in the file
 			fr = new FileReader (file);
@@ -81,7 +80,7 @@ public class FileManager {
 						info.getInfo().put(key, values);
 					}
 					else{
-						info.getInfo().get(key).offerFirst(visits);
+						info.getInfo().get(key).offerLast(visits);
 						info.getInfo().put(key, info.getInfo().get(key));
 
 					}

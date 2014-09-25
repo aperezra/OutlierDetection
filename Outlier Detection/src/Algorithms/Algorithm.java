@@ -17,5 +17,5 @@ public interface Algorithm {
 	 *
 	 * @return the int
 	 */
-	double ros(int index);
+	double ros();
 }

@@ -7,21 +7,24 @@ import Algorithms.*;
 public class Compute {
 
 	public static Info info = new Info();
+	public static boolean controlRead=true;
+	public static boolean controlCompute=true;
 
-	
-	
+
+
 	private static class ThreadRead extends Thread {
 		public FileManager reader;
 		public List<File> files;
 
-		public ThreadRead(FileManager reader, String sourceDirectory){
+		public ThreadRead(List<File> files, FileManager reader){
 			super();
 			this.reader=reader;
-			this.files=reader.listDirectories(sourceDirectory);
+			this.files=files;
+
 		}
 
 		public void run() {
-			while(true) {
+			while(controlRead) {
 				try {
 					read();
 				} catch (InterruptedException e) {
@@ -30,20 +33,27 @@ public class Compute {
 				}
 			}
 		}
-		public synchronized void read() throws InterruptedException{
-			for (File file: files){
-				reader.parse(file, info);
-
-				for(String key: info.getInfo().keySet()){
-					System.out.println(info.getInfo().get(key));
+		public void read() throws InterruptedException{
+			synchronized(info){
+				int i=0;
+				for (File file: files){
+					reader.parse(file, info);
+//					for(String key: info.getInfo().keySet()){
+//						if(key.contains("Patch"))
+//						System.out.println(i+" "+key + "  " +info.getInfo().get(key));	
+//					}
+					i++;
+					while(info.getSizeDeque()>10){
+						info.wait();
+						info.notify();
+					}
 				}
-				notify();
-				wait();
+				controlRead=false;
+				System.out.println("He salido del while de tu puta madre");
 			}
+
 		}
-
 	}
-
 
 	private static class ThreadCompute extends Thread {
 		public Density density;
@@ -54,42 +64,52 @@ public class Compute {
 		}
 
 		public void run() {
-			while(true) {
+			while(controlCompute) {
 				try {
-					wait();
 					compute();
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
+			System.out.println("He salido del while de compute");
 		}
-		
-		public synchronized void compute() throws InterruptedException{
 
-			for(String key:info.getInfo().keySet()){
-
-				DescriptiveStats stat = new DescriptiveStats(info.getInfo().get(key));
-				int mean = stat.getMean();
-				density.densityX(info.getInfo().get(key),mean,info.getInfo().get(key).getLast());
-				System.out.println(density.getDensities());
+		public void compute() throws InterruptedException{
+			synchronized(info){
+				for(String key:info.getInfo().keySet()){
+					DescriptiveStats stat = new DescriptiveStats(info.getInfo().get(key));
+					int mean = stat.getMean();
+					density.densityX(info.getInfo().get(key), mean,info.getInfo().get(key).getLast());
+					if ((info.getInfo().get(key).size()>8)&&(density.ros()>0.9)){
+						System.out.println("We've found what seems to be an outlier");
+						System.out.println(density.getDensities());
+						System.out.println(key + "  " +info.getInfo().get(key));	
+					}
+					if(density.getDensities().size()>10){
+					density.getDensities().removeLast();
+					}
+					info.getInfo().get(key).removeFirst();
+				}
+				if(controlRead){
+					info.notify();
+					info.wait();
+				}
+				if(info.isEmptyDeque()){
+					controlCompute=false;
+				}
 			}
-			notify();
 		}
 	}
 
-
-	public static void main (String[] args){
+	public static void main (String[] args) throws InterruptedException{
 		FileManager fm = new FileManager();
 		String rootDirectory = "/Users/alvaro/Documents/TUGraz/Master Thesis/TrainingSet/";
-		ThreadRead threadRead = new ThreadRead(fm, rootDirectory);
+		List<File> files = fm.listDirectories(rootDirectory);
+		ThreadRead threadRead = new ThreadRead(files, fm);
 		ThreadCompute threadCompute = new ThreadCompute(new Density());
 		threadRead.start();
 		threadCompute.start();
 	}
+} 
 
-
-
-
-
-}

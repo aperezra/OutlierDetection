@@ -20,5 +20,17 @@ public class Info {
 		this.info = info;
 	} 
 	
+	public int getSizeDeque(){
+		for (String key: info.keySet()){
+			return info.get(key).size();
+		}
+		return 0;
+	}
+	public boolean isEmptyDeque(){
+		for (String key: info.keySet()){
+			return info.get(key).isEmpty();
+		}
+		return true;
+	}
 	
 }

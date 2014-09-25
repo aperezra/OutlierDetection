@@ -104,8 +104,11 @@ public class DescriptiveStats
 		for(int i: values){
 			sum += i;
 		}
-		mean = sum/values.size();
-		return mean;
+		if(values.size()!=0){
+			mean = sum/values.size();
+			return mean;
+		}
+		return 0;
 	}
 
 	/**

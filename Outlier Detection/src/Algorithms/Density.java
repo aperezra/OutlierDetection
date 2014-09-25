@@ -1,26 +1,26 @@
 package Algorithms;
-import java.util.ArrayList;
+import java.util.ArrayDeque;
 import java.util.Deque;
-import java.util.List;
+
 
 
 
 public class Density implements Algorithm {
 
-	public List<Double> densities;
+	public Deque<Double> densities;
 	public double max;
 	
 	public Density() {
 		super();
-		this.densities = new ArrayList<Double>();
+		this.densities = new ArrayDeque<Double>();
 		this.max = 0;
 	}
 
-	public List<Double> getDensities() {
+	public Deque<Double> getDensities() {
 		return densities;
 	}
 
-	public void setDensities(List<Double> densities) {
+	public void setDensities(Deque<Double> densities) {
 		this.densities = densities;
 	}
 
@@ -68,10 +68,10 @@ public class Density implements Algorithm {
 	
 	
 	@Override
-	public double ros(int index) {
+	public double ros() {
 		double ros = 0;
 		if(max!=0){
-			ros = 1 - (densities.get(index)/max);
+			ros = 1 - (densities.getLast()/max);
 		}
 		return ros;
 	}
