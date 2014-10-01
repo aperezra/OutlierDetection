@@ -2,9 +2,8 @@ package Algorithms;
 
 
 import java.util.ArrayDeque;
-import java.util.ArrayList;
 import java.util.Deque;
-import java.util.List;
+import java.util.logging.Logger;
 
 
 
@@ -16,15 +15,15 @@ import java.util.List;
 public class Knn implements Algorithm{
 
 	/** The distances. */
-	public List<Integer> distances;
-
+	public Deque<Integer> distances;
+	private static final Logger log = Logger.getLogger( Knn.class.getName() );
 
 	/**
 	 * Instantiates a new algorithms.
 	 */
 	public Knn() {
 		super();
-		this.distances = new ArrayList<Integer>();
+		this.distances = new ArrayDeque<Integer>();
 
 	}
 
@@ -33,7 +32,7 @@ public class Knn implements Algorithm{
 	 *
 	 * @return the distances
 	 */
-	public List<Integer> getDistances() {
+	public Deque<Integer> getDistances() {
 		return distances;
 	}
 
@@ -42,7 +41,7 @@ public class Knn implements Algorithm{
 	 *
 	 * @param distances the new distances
 	 */
-	public void setDistances(List<Integer> distances) {
+	public void setDistances(Deque<Integer> distances) {
 		this.distances = distances;
 	}
 
@@ -76,14 +75,14 @@ public class Knn implements Algorithm{
 
 	/**
 	 * Calculates the distance from X to all the other points in the list.
-	 *
+	 * And stores in a Deque the mean value of the distances to all the other points.
 	 * @param data the data
 	 */
 	public void knnX(Deque<Integer> data, int x){
 		double max=0;
 		Deque<Integer> dist = new ArrayDeque<Integer>();
 		for(int i: data){
-			dist.add(distance(i,x));		
+			dist.addLast(distance(i,x));		
 		}
 		DescriptiveStats stats = new DescriptiveStats(dist);
 		int meanVal=stats.getMean();
@@ -91,7 +90,7 @@ public class Knn implements Algorithm{
 			max=meanVal;
 		}
 
-		distances.add(meanVal);
+		distances.addLast(meanVal);
 	}
 	
 	/**

@@ -59,14 +59,24 @@ public class Density implements Algorithm {
 			if (density>max){
 				max = density;
 			}
-			densities.add(density);
+			if(densities.isEmpty()){
+				densities.offerFirst(density);
+			}
+			else{
+				densities.offerLast(density);
+			}
 		}
 		else{
-			densities.add(0.0);	
+			if(densities.isEmpty()){
+				densities.offerFirst(0.0);
+			}
+			else{
+				densities.offerLast(0.0);
+			}	
 		}
 	}
 	
-	
+	//The bigger ros is, the likelier is to be an outlier
 	@Override
 	public double ros() {
 		double ros = 0;

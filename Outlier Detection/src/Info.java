@@ -26,11 +26,8 @@ public class Info {
 		}
 		return 0;
 	}
-	public boolean isEmptyDeque(){
-		for (String key: info.keySet()){
-			return info.get(key).isEmpty();
-		}
-		return true;
+	public boolean isEmptyDeque(String key){
+		return info.get(key).isEmpty();
 	}
 	
 }
