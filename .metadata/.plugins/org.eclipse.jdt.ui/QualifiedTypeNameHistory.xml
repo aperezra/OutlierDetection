@@ -19,12 +19,13 @@
 <fullyQualifiedTypeName name="java.util.Deque"/>
 <fullyQualifiedTypeName name="java.io.File"/>
 <fullyQualifiedTypeName name="Algorithms.Algorithm"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="Compute"/>
 <fullyQualifiedTypeName name="java.util.ArrayDeque"/>
 <fullyQualifiedTypeName name="java.util.Queue"/>
 <fullyQualifiedTypeName name="java.util.logging.Logger"/>
 <fullyQualifiedTypeName name="java.util.logging.Level"/>
 <fullyQualifiedTypeName name="Algorithms.Density"/>
+<fullyQualifiedTypeName name="java.util.concurrent.locks.ReentrantReadWriteLock"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="Compute"/>
 </qualifiedTypeNameHistroy>

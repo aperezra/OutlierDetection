@@ -13,18 +13,19 @@
 		<item value="false" key="isRegEx"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="Patch" key="selection"/>
+		<item value="" key="selection"/>
 		<list key="findhistory">
-			<item value="Patch"/>
-			<item value="Galileo_Galilei"/>
-			<item value="List"/>
-			<item value="he salido"/>
-			<item value="getSize"/>
-			<item value="[1, 1, 8, 2]"/>
-			<item value="Apollo"/>
-			<item value="facebook"/>
+			<item value="aqui estoy"/>
+			<item value="vuelta: 10"/>
+			<item value="vuelta: 12"/>
+			<item value="vuelta: 11"/>
+			<item value="he llegado"/>
+			<item value="vuelta: 13&#x0A;"/>
+			<item value="vuelta: 14&#x0A;"/>
+			<item value="vuelta: 13"/>
 		</list>
 		<list key="replacehistory">
+			<item value=""/>
 			<item value="Deque"/>
 			<item value="values"/>
 			<item value="List"/>
@@ -32,7 +33,6 @@
 			<item value="directories"/>
 			<item value="stat.getScores()"/>
 			<item value="scores"/>
-			<item value=""/>
 		</list>
 	</section>
 </section>
