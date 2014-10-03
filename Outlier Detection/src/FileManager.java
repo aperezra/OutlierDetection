@@ -8,6 +8,7 @@ import java.nio.channels.FileChannel;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Deque;
+import java.util.HashMap;
 import java.util.List;
 
 
@@ -59,7 +60,7 @@ public class FileManager {
 	 *
 	 * @param file the file
 	 */
-	public void parse(File file, Info info){
+	public void parse(File file, HashMap<String, Deque<Integer>> info){
 		FileReader fr = null;
 		BufferedReader br = null;
 		//File file = null;
@@ -74,14 +75,14 @@ public class FileManager {
 					String[] partes = line.split("\\s+");
 					String key = (partes[0] +" "+ partes[1]);
 					int visits = Integer.parseInt(partes[2]);
-					if (!info.getInfo().containsKey(key)){
+					if (!info.containsKey(key)){
 						Deque<Integer> values = new ArrayDeque<Integer>();
 						values.offerFirst(visits);
-						info.getInfo().put(key, values);
+						info.put(key, values);
 					}
 					else{
-						info.getInfo().get(key).offerLast(visits);
-						info.getInfo().put(key, info.getInfo().get(key));
+						info.get(key).offerLast(visits);
+						info.put(key, info.get(key));
 
 					}
 				}

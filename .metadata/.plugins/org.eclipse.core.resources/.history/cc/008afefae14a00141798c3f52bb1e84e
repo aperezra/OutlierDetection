@@ -1,0 +1,20 @@
+
+public class ThreadReader {
+
+	public WriteRead wr;
+	
+	public ThreadReader(WriteRead wr){
+		this.wr=wr;
+	}
+	
+	public void run(){
+		while(wr.isControlWrite()){
+			try {
+				wr.compute("de Haiti");
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+}

@@ -1,0 +1,82 @@
+import java.io.File;
+import java.util.Deque;
+import java.util.HashMap;
+import java.util.List;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantReadWriteLock;
+
+
+
+public class WriteRead {
+
+	public HashMap<String, Deque<Integer>> info;
+	public boolean controlRead;
+	public boolean controlWrite;
+	//public static boolean keys = false;
+	private final ReentrantReadWriteLock rwl = new ReentrantReadWriteLock(true);
+	private final Lock r = rwl.readLock();
+	private final Lock w = rwl.writeLock();
+
+	public WriteRead(HashMap<String, Deque<Integer>> info){
+		this.info=info;
+		controlRead=true;
+		controlWrite=true;
+	}
+
+
+
+	public HashMap<String, Deque<Integer>> getInfo() {
+		return this.info;
+	}
+
+
+
+	public boolean isControlRead() {
+		return controlRead;
+	}
+
+
+
+	public boolean isControlWrite() {
+		return controlWrite;
+	}
+
+	public void write(List<File> files, FileManager writer) throws InterruptedException{
+		for (File file: files){
+			w.tryLock();
+			writer.parse(file, this.info);
+			System.out.println("Escritura "+this.info.get("de Haiti"));
+			while(info.get("de Haiti").size()>10){
+				w.unlock();
+				System.out.println("He soltado el cerrojo de escritura");
+			}
+		}
+		controlWrite=false; //When all the files have been parsed I want this thread to end.
+	}
+
+	public void compute(String key) throws InterruptedException{
+		while(this.info.isEmpty()){
+			Thread.sleep(1);
+		}
+		r.lock();
+		System.out.println("He cogido el cerrojo de lectura");
+		this.info.get(key).removeFirst(); //I take out the first element, expecting that the other thread fills with a new value the deque
+		System.out.println("Lectura "+this.info.get(key));
+		r.unlock();
+		if(info.get(key).isEmpty()){
+			controlRead=false;
+		}
+	}
+
+	public static void main (String[] args){
+		WriteRead wr = new WriteRead(new HashMap<String, Deque<Integer>>());
+		FileManager fm = new FileManager();
+		String rootDirectory = "/Users/alvaro/Documents/TUGraz/Master Thesis/TrainingSet/";
+		List<File> files = fm.listDirectories(rootDirectory);
+		ThreadWriter tw= new ThreadWriter(wr, files, fm);
+		ThreadReader tr = new ThreadReader(wr);
+		tw.start();
+		tr.start();
+
+	}
+}

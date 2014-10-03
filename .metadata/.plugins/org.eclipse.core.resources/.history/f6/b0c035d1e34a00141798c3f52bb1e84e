@@ -1,0 +1,77 @@
+import java.io.File;
+import java.util.List;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantReadWriteLock;
+
+
+
+public class WriteRead {
+
+	public Info info;
+	public boolean controlRead;
+	public boolean controlWrite;
+	//public static boolean keys = false;
+	private final ReentrantReadWriteLock rwl = new ReentrantReadWriteLock(true);
+	private final Lock r = rwl.readLock();
+	private final Lock w = rwl.writeLock();
+
+	public WriteRead(Info info){
+		this.info=info;
+		controlRead=true;
+		controlWrite=true;
+	}
+
+
+
+	public Info getInfo() {
+		return info;
+	}
+
+
+
+	public boolean isControlRead() {
+		return controlRead;
+	}
+
+
+
+	public boolean isControlWrite() {
+		return controlWrite;
+	}
+
+	public void write(List<File> files, FileManager writer) throws InterruptedException{
+		for (File file: files){
+			w.tryLock();
+			writer.parse(file, this.info);
+			System.out.println(this.info.getInfo().get("de Haiti"));
+			while(info.getSizeDeque()>10){
+				w.unlock();
+			}
+		}
+		controlWrite=false; //When all the files have been parsed I want this thread to end.
+	}
+
+	public void compute(String key) throws InterruptedException{
+		r.lock();
+		info.getInfo().get(key).removeFirst(); //I take out the first element, expecting that the other thread fills with a new value the deque
+		r.unlock();
+		if(info.isEmptyDeque(key)){
+			controlRead=false;
+		}
+	}
+
+	public static void main (String[] args){
+		WriteRead wr = new WriteRead(new Info());
+		FileManager fm = new FileManager();
+		String rootDirectory = "/Users/alvaro/Documents/TUGraz/Master Thesis/TrainingSet/";
+		List<File> files = fm.listDirectories(rootDirectory);
+		ThreadWriter tw= new ThreadWriter(wr, files, fm);
+		ThreadReader tr = new ThreadReader(wr);
+		tw.start();
+		while(wr.getInfo().getInfo().isEmpty()){
+			System.out.println("");
+		}
+		tr.start();
+
+	}
+}

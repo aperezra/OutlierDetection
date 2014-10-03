@@ -1,0 +1,103 @@
+import java.io.File;
+import java.util.Deque;
+import java.util.HashMap;
+import java.util.List;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantReadWriteLock;
+
+
+
+public class WriteRead {
+
+	public HashMap<String, Deque<Integer>> info;
+	public boolean controlRead;
+	public boolean needValues;
+	//public static boolean keys = false;
+	private final ReentrantReadWriteLock rwl = new ReentrantReadWriteLock();
+	private final Lock r = rwl.readLock();
+	private final Lock w = rwl.writeLock();
+
+	public WriteRead(HashMap<String, Deque<Integer>> info){
+		this.info=info;
+		controlRead=true;
+		needValues=true;
+	}
+
+
+
+	public HashMap<String, Deque<Integer>> getInfo() {
+		return this.info;
+	}
+
+
+
+	public boolean isControlRead() {
+		return controlRead;
+	}
+
+
+
+	public boolean isNeedValues() {
+		return needValues;
+	}
+
+	public void write(File file, FileManager writer) throws InterruptedException{
+		if(needValues){
+			w.lock();
+			System.out.println("He cogido el cerrojo de escritura");
+		}
+		try{
+			writer.parse(file, this.info);
+			needValues=false;
+			System.out.println("Escritura "+this.info.get("de Haiti"));
+			try{
+				Thread.sleep(100);
+			} catch (InterruptedException e){
+				e.printStackTrace();
+			}
+		}
+		finally{
+			w.unlock();
+			System.out.println("He soltado el cerrojo de escritura");
+		}
+	}
+
+	public void compute(String key) throws InterruptedException{
+		while(this.info.isEmpty()){
+			Thread.sleep(1);
+		}
+		r.lock();
+		try{
+			System.out.println("He cogido el cerrojo de lectura");
+			this.info.get(key).removeFirst(); //I take out the first element, expecting that the other thread fills with a new value the deque
+			needValues=true;
+			System.out.println("Lectura "+this.info.get(key));
+			try{
+				Thread.sleep(100);
+			} catch (InterruptedException e){
+				e.printStackTrace();
+			}
+		}
+		finally{
+			r.unlock();
+			System.out.println("He soltado el cerrojo de lectura");
+			if(info.get(key).isEmpty()){
+				controlRead=false;
+			}
+		}
+	}
+
+	public static void main (String[] args){
+		WriteRead wr = new WriteRead(new HashMap<String, Deque<Integer>>());
+		FileManager fm = new FileManager();
+		String rootDirectory = "/Users/alvaro/Documents/TUGraz/Master Thesis/TrainingSet/";
+		List<File> files = fm.listDirectories(rootDirectory);
+		ThreadWriter tw= new ThreadWriter(wr, files, fm);
+		ThreadReader tr = new ThreadReader(wr);
+		Thread writer = new Thread(tw);
+		Thread reader = new Thread(tr);
+		writer.start();
+		reader.start();
+
+	}
+}

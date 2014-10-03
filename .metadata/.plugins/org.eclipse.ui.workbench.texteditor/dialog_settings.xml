@@ -13,16 +13,16 @@
 		<item value="false" key="isRegEx"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="" key="selection"/>
+		<item value="lectura" key="selection"/>
 		<list key="findhistory">
+			<item value="lectura"/>
+			<item value="cerrojo"/>
+			<item value="estoy aqui"/>
+			<item value="valor"/>
+			<item value="try"/>
 			<item value="aqui estoy"/>
 			<item value="vuelta: 10"/>
 			<item value="vuelta: 12"/>
-			<item value="vuelta: 11"/>
-			<item value="he llegado"/>
-			<item value="vuelta: 13&#x0A;"/>
-			<item value="vuelta: 14&#x0A;"/>
-			<item value="vuelta: 13"/>
 		</list>
 		<list key="replacehistory">
 			<item value=""/>
