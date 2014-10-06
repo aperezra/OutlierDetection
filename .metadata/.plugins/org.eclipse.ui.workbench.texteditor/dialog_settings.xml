@@ -3,28 +3,29 @@
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="263" key="DIALOG_WIDTH"/>
 		<item value="135" key="DIALOG_Y_ORIGIN"/>
-		<item value="849" key="DIALOG_X_ORIGIN"/>
 		<item value="399" key="DIALOG_HEIGHT"/>
+		<item value="849" key="DIALOG_X_ORIGIN"/>
 		<item value="1|Lucida Grande|11.0|0|COCOA|1|LucidaGrande" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="true" key="wrap"/>
-		<item value="false" key="casesensitive"/>
 		<item value="false" key="isRegEx"/>
+		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="lectura" key="selection"/>
+		<item value="es Franz_Welser-M%C3%B6st&#x0A;" key="selection"/>
 		<list key="findhistory">
+			<item value="es Franz_Welser-M%C3%B6st&#x0A;"/>
+			<item value="media"/>
+			<item value="distance"/>
+			<item value="densities"/>
+			<item value="de Special:Search"/>
+			<item value="en Arsenal_F.C"/>
+			<item value="Wikipedia:Portada"/>
 			<item value="lectura"/>
-			<item value="cerrojo"/>
-			<item value="estoy aqui"/>
-			<item value="valor"/>
-			<item value="try"/>
-			<item value="aqui estoy"/>
-			<item value="vuelta: 10"/>
-			<item value="vuelta: 12"/>
 		</list>
 		<list key="replacehistory">
+			<item value="distances"/>
 			<item value=""/>
 			<item value="Deque"/>
 			<item value="values"/>
@@ -32,7 +33,6 @@
 			<item value="list"/>
 			<item value="directories"/>
 			<item value="stat.getScores()"/>
-			<item value="scores"/>
 		</list>
 	</section>
 </section>

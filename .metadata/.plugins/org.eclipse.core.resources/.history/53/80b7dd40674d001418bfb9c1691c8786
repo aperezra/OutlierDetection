@@ -1,0 +1,29 @@
+import Algorithms.*;
+
+
+public class ThreadReader implements Runnable {
+
+	public WriteRead wr;
+	public String key;
+	public Hull hull;
+	
+	public ThreadReader(WriteRead wr, String key, Hull hull){
+		this.wr=wr;
+		this.key=key;
+		this.hull=hull;
+	}
+	
+	public void run(){
+		while(wr.isControlRead()){
+			try {
+				wr.compute(key, hull);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+}

@@ -19,13 +19,15 @@ public class WriteRead {
 	private final Lock r = rwl.readLock();
 	private final Lock w = rwl.writeLock();
 	public int count;
+	public int winsize;
 
-	public WriteRead(HashMap<String, Deque<Integer>> info){
+	public WriteRead(HashMap<String, Deque<Integer>> info, int winsize){
 		this.info=info;
 		controlRead=true;
 		needValues=true;
 		keysExist=false;
 		count=0;
+		this.winsize=winsize;
 	}
 
 
@@ -33,7 +35,6 @@ public class WriteRead {
 	public HashMap<String, Deque<Integer>> getInfo() {
 		return this.info;
 	}
-
 
 
 	public boolean isControlRead() {
@@ -58,7 +59,6 @@ public class WriteRead {
 		try{
 			writer.parse(file, this.info);
 			keysExist=true;
-			//System.out.println("Escritura "+this.info.get("es 40_Principales"));
 			try{
 				Thread.sleep(100);
 			} catch (InterruptedException e){
@@ -66,23 +66,26 @@ public class WriteRead {
 			}
 		}
 		finally{
-			if(this.info.get("de Haiti").size()>10){
+			if(this.info.get("de Haiti").size()>winsize){
 				needValues=false;
 				w.unlock();
-				System.out.println(rwl.isWriteLocked());
-				System.out.println(rwl.getQueueLength());
 			}
 		}
 		
 	}
 
-	public void compute(String key, Density density) throws InterruptedException{
+	public void compute(String key, Algorithm algorithm) throws Exception{
 		r.lock();
 		try{
-			DescriptiveStats  ds= new DescriptiveStats(info.get(key));
-			density.densityX(info.get(key), ds.getMean(), info.get(key).getLast());
-			System.out.println(density.getDensities());
-			this.info.get(key).removeFirst();
+			algorithm.calculate(info.get(key));
+			algorithm.probOutlier();
+			if(algorithm.getSize()>winsize){
+				algorithm.deleteFirst();
+			}
+			if (key.equals("de 40_Wall_Street")){
+				System.out.println(info.get(key));
+			}
+			info.get(key).removeFirst();
 			count++;
 			if(count==info.keySet().size()-1){
 				needValues=true;
@@ -102,10 +105,18 @@ public class WriteRead {
 	}
 
 	public static void main (String[] args){
-		WriteRead wr = new WriteRead(new HashMap<String, Deque<Integer>>());
+		WriteRead wr = new WriteRead(new HashMap<String, Deque<Integer>>(), 10);
 		FileManager fm = new FileManager();
 		String rootDirectory = "/Users/alvaro/Documents/TUGraz/Master Thesis/TrainingSet/";
 		List<File> files = fm.listDirectories(rootDirectory);
+		while(files.isEmpty()){
+			try {
+				Thread.sleep(1);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 		ThreadWriter tw= new ThreadWriter(wr, files, fm);
 		Thread writer = new Thread(tw);
 		writer.start();
@@ -118,10 +129,9 @@ public class WriteRead {
 			}
 		}
 		for(String key: wr.getInfo().keySet()){
-			ThreadReader tr = new ThreadReader(wr, key);
+			ThreadReader tr = new ThreadReader(wr, key, new Hull());
 			Thread reader = new Thread(tr);
 			reader.start();
 		}
-
 	}
 }

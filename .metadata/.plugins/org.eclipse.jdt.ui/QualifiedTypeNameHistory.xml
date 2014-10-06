@@ -21,7 +21,6 @@
 <fullyQualifiedTypeName name="java.util.Queue"/>
 <fullyQualifiedTypeName name="java.util.logging.Logger"/>
 <fullyQualifiedTypeName name="java.util.logging.Level"/>
-<fullyQualifiedTypeName name="Algorithms.Density"/>
 <fullyQualifiedTypeName name="java.util.concurrent.locks.ReentrantReadWriteLock"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="Compute"/>
@@ -29,5 +28,7 @@
 <fullyQualifiedTypeName name="java.util.concurrent.locks.Lock"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="Algorithms.Density"/>
 <fullyQualifiedTypeName name="java.util.Deque"/>
+<fullyQualifiedTypeName name="org.apache.commons.math3.analysis.function.Gaussian"/>
 </qualifiedTypeNameHistroy>

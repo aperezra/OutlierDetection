@@ -3,8 +3,6 @@ package Algorithms;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
-import java.util.logging.Logger;
-
 
 
 /**
@@ -16,7 +14,6 @@ public class Knn implements Algorithm{
 
 	/** The distances. */
 	public Deque<Integer> distances;
-	private static final Logger log = Logger.getLogger( Knn.class.getName() );
 
 	/**
 	 * Instantiates a new algorithms.
@@ -45,6 +42,9 @@ public class Knn implements Algorithm{
 		this.distances = distances;
 	}
 
+	public int getSize(){
+		return distances.size();
+	}
 	/**
 	 * Distance.
 	 *
@@ -52,24 +52,21 @@ public class Knn implements Algorithm{
 	 * @param val the val
 	 * @return the int
 	 */
-	@Override
 	public int distance(int reference, int val) {
 		int distance = Math.abs(val-reference);
 		return distance;
 	}
 	
 
-	@Override
-	public double ros() {
-//		DescriptiveStats stats = new DescriptiveStats(distances);
-//		double dev = stats.getStandardDev(stats.getMean());
-//		return dev;
-//		//		double ros = 0;
-//		
-////		if(max!=0){
-////			ros = (distances.get(index)/max);
-////		}
-		return 0.0;
+
+	public double probOutlier() {
+		DescriptiveStats ds = new DescriptiveStats(distances);
+		double mean = ds.getMean();
+		System.out.println(mean);
+		double sigma = ds.getStandardDev(mean);
+		System.out.println(sigma);
+		Gaussian gaussian = new Gaussian(); 
+		return gaussian.phi(distances.getLast(),mean,sigma);
 	}
 	
 
@@ -78,34 +75,30 @@ public class Knn implements Algorithm{
 	 * And stores in a Deque the mean value of the distances to all the other points.
 	 * @param data the data
 	 */
-	public void knnX(Deque<Integer> data, int x){
+	public void calculate(Deque<Integer> data){
 		double max=0;
 		Deque<Integer> dist = new ArrayDeque<Integer>();
 		for(int i: data){
-			dist.addLast(distance(i,x));		
+			dist.addLast(distance(i,data.getLast()));		
 		}
 		DescriptiveStats stats = new DescriptiveStats(dist);
 		int meanVal=stats.getMean();
 		if(meanVal>max){
 			max=meanVal;
 		}
+		if(distances.isEmpty()){
+			distances.offerFirst(meanVal);
+		}
+		else{
+			distances.offerLast(meanVal);
+		}
 
-		distances.addLast(meanVal);
 	}
-	
-	/**
-	* Calculates the distance from a point to the k previous points.
-	*
-	* @param data the data/
-    * @param k the number of neighbors to calculate
-	*/
-//	public void knn(List<Integer> data, int k){
-//		for(int i=(data.size()-k-1); i<(data.size()-1); i++){
-//			int distance = distance(data.get(i),this.value);			
-//		}
-//	}
 
-	
+	@Override
+	public void deleteFirst() {
+		distances.removeFirst();
+	}
 
 
 }

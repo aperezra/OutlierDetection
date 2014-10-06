@@ -75,6 +75,7 @@ public class DescriptiveStats
 		return max;
 	}
 
+
 //	/**
 //	 * Gets the median.
 //	 *
@@ -96,8 +97,7 @@ public class DescriptiveStats
 	 *
 	 * @return the mean
 	 */
-	public int getMean()
-	{
+	public int getMean(){
 
 		int mean = 0;
 		int sum = 0;
@@ -117,15 +117,11 @@ public class DescriptiveStats
 	 * @param m the m
 	 * @return the standard dev
 	 */
-	public double getStandardDev(int m)
-	{
-		int mean = m;
-		double result =0;
+	public double getStandardDev(double mean){
+		double result = 0;
 		double total = 0;
 		for(int i: values){
 			result += Math.pow(i-mean,2);
-			
-
 		}
 		total = result/values.size();
 		double standev = Math.sqrt(total);

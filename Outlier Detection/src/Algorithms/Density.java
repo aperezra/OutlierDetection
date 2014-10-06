@@ -27,13 +27,15 @@ public class Density implements Algorithm {
 	public double getMax() {
 		return max;
 	}
-
+		
 	public void setMax(double max) {
 		this.max = max;
 	}
 	
+	public int getSize(){
+		return densities.size();
+	}
 	
-	@Override
 	public int distance(int reference, int val) {
 		int distance = Math.abs(val-reference);
 		return distance;
@@ -47,11 +49,12 @@ public class Density implements Algorithm {
 	 * @param p reference point to which is calculated the density
 	 * @param x the point to which we are calculating the density
 	 */
-	public void densityX(Deque<Integer> data, int p, int x){
+	public void calculate(Deque<Integer> data){
 		double density = 0;
 		double sum = 0;
+		int p = new DescriptiveStats(data).getMean();
 		for(int i=0; i<data.size();i++){
-			sum+= Math.abs(distance(data.getFirst(),p) - distance(x,p));
+			sum+= Math.abs(distance(data.getFirst(),p) - distance(data.getLast(),p));
 		}
 		if(sum!=0){
 			int k = data.size()-1;
@@ -75,15 +78,29 @@ public class Density implements Algorithm {
 			}	
 		}
 	}
+	public void calcMax(){
+		for (double d:densities){
+			if(d>max){
+				max=d;
+			}
+		}
+	}
 	
 	//The bigger ros is, the likelier is to be an outlier
-	@Override
-	public double ros() {
+	public double probOutlier() {
+		if(!densities.contains(max)){
+			calcMax();
+		}
 		double ros = 0;
 		if(max!=0){
 			ros = 1 - (densities.getLast()/max);
 		}
 		return ros;
+	}
+
+	@Override
+	public void deleteFirst() {
+		densities.removeFirst();
 	}
 
 

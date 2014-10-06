@@ -1,6 +1,8 @@
 package Algorithms;
+
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Deque;
 import java.util.List;
 
 
@@ -13,18 +15,22 @@ public class Hull implements Algorithm{
 		this.hulls=new ArrayList<Integer>();
 	}
 
-	@Override
-	public int distance(int reference, int val) {
-		// TODO Auto-generated method stub
-		return 0;
+
+	public List<Integer> getHulls() {
+		return hulls;
+	}
+	
+	public int getSize(){
+		return hulls.size();
 	}
 
+	public void deleteFirst(){
+		hulls.remove(0);
+	}
 
-	@Override	
-	public double ros() {
+	public double probOutlier() {
 		double numHull=0;
 		return numHull;
-
 	}
 
 	/**
@@ -33,15 +39,18 @@ public class Hull implements Algorithm{
 	 * @param data the list with the visits
 	 * @return the sorted list from lower to higher value
 	 */
-	public void hull(int val, List<Integer> data){
+	public void calculate(Deque<Integer> data){
 		if(hulls.isEmpty()){
 			hulls = new ArrayList<Integer>(data);
 		}
 		else{
-			hulls.add(val);
+			hulls.add(data.getLast());
 		}
 		Collections.sort(hulls);
 	}
+
+
+
 
 
 

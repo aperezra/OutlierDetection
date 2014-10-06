@@ -1,21 +1,16 @@
 package Algorithms;
 
-/**
- * The Interface Algorithm.
- */
+import java.util.Deque;
+
 public interface Algorithm {
 	
-	/**
-	 * Distancia.
-	 *
-	 * @return the int
-	 */
-	int distance(int reference, int val);
+	void calculate(Deque<Integer> data);
 	
-	/**
-	 * Ros.
-	 *
-	 * @return the int
-	 */
-	double ros();
+	double probOutlier();
+	
+	int getSize();
+	
+	void deleteFirst();
+
+
 }
