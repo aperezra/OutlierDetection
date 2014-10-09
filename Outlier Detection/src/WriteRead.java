@@ -1,26 +1,25 @@
+
 import java.io.File;
 import java.util.Deque;
 import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
-
 import Algorithms.*;
-
-
-
 public class WriteRead {
-
+	
+	private final ReentrantReadWriteLock rwl = new ReentrantReadWriteLock();
+	private final Lock r = rwl.readLock();
+	private final Lock w = rwl.writeLock();
 	public HashMap<String, Deque<Integer>> info;
 	public boolean controlRead;
 	public boolean needValues;
 	public boolean keysExist;
-	private final ReentrantReadWriteLock rwl = new ReentrantReadWriteLock();
-	private final Lock r = rwl.readLock();
-	private final Lock w = rwl.writeLock();
 	public int count;
 	public int winsize;
-
+	public int numOutliers;
+	public String nameFile;
+	
 	public WriteRead(HashMap<String, Deque<Integer>> info, int winsize){
 		this.info=info;
 		controlRead=true;
@@ -28,35 +27,26 @@ public class WriteRead {
 		keysExist=false;
 		count=0;
 		this.winsize=winsize;
+		this.nameFile="";
 	}
-
-
-
 	public HashMap<String, Deque<Integer>> getInfo() {
 		return this.info;
 	}
-
-
 	public boolean isControlRead() {
 		return controlRead;
 	}
-
-
-
 	public boolean isNeedValues() {
 		return needValues;
 	}
-	
 	public boolean isKeysExist() {
 		return keysExist;
 	}
-
 	public void write(File file, FileManager writer) throws InterruptedException{
 		if(needValues && !rwl.isWriteLocked()){
-
 			w.tryLock();
 		}
 		try{
+			nameFile=file.getName();
 			writer.parse(file, this.info);
 			keysExist=true;
 			try{
@@ -66,23 +56,20 @@ public class WriteRead {
 			}
 		}
 		finally{
-			if(this.info.get("de Haiti").size()>winsize){
+			if(this.info.get("de !_!").size()>winsize){
 				needValues=false;
 				w.unlock();
 			}
 		}
-		
 	}
-
 	public void compute(String key, Algorithm algorithm) throws Exception{
 		r.lock();
 		try{
 			algorithm.calculate(info.get(key));
-			algorithm.probOutlier();
-			if(algorithm.getSize()>winsize){
-				algorithm.deleteFirst();
-			}
-			if (key.equals("de 40_Wall_Street")){
+			if (key.equals("es Hosni_Mubarak") && algorithm.probOutlier()>1){
+				numOutliers++;
+				System.out.println(numOutliers + " "+nameFile + " "+algorithm.probOutlier());
+				System.out.println(algorithm.toString());
 				System.out.println(info.get(key));
 			}
 			info.get(key).removeFirst();
@@ -98,14 +85,13 @@ public class WriteRead {
 		}
 		finally{
 			r.unlock();
-			if(info.get(key).isEmpty()){
+			if(info.get(key).size()<winsize-1){
 				controlRead=false;
 			}
 		}
 	}
-
 	public static void main (String[] args){
-		WriteRead wr = new WriteRead(new HashMap<String, Deque<Integer>>(), 10);
+		WriteRead wr = new WriteRead(new HashMap<String, Deque<Integer>>(), 8);
 		FileManager fm = new FileManager();
 		String rootDirectory = "/Users/alvaro/Documents/TUGraz/Master Thesis/TrainingSet/";
 		List<File> files = fm.listDirectories(rootDirectory);
@@ -129,9 +115,11 @@ public class WriteRead {
 			}
 		}
 		for(String key: wr.getInfo().keySet()){
-			ThreadReader tr = new ThreadReader(wr, key, new Hull());
+			ThreadReader tr = new ThreadReader(wr, key, new Density());
 			Thread reader = new Thread(tr);
 			reader.start();
 		}
 	}
 }
+
+

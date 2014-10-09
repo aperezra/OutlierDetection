@@ -1,8 +1,10 @@
 package Algorithms;
 
-
-import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Deque;
+import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 
 /**
@@ -13,14 +15,16 @@ import java.util.Deque;
 public class Knn implements Algorithm{
 
 	/** The distances. */
-	public Deque<Integer> distances;
+	public List<Integer> distances;
+	public int value;
 
 	/**
 	 * Instantiates a new algorithms.
 	 */
 	public Knn() {
 		super();
-		this.distances = new ArrayDeque<Integer>();
+		this.distances = new ArrayList<Integer>();
+		value=0;
 
 	}
 
@@ -29,7 +33,7 @@ public class Knn implements Algorithm{
 	 *
 	 * @return the distances
 	 */
-	public Deque<Integer> getDistances() {
+	public List<Integer> getDistances() {
 		return distances;
 	}
 
@@ -38,7 +42,7 @@ public class Knn implements Algorithm{
 	 *
 	 * @param distances the new distances
 	 */
-	public void setDistances(Deque<Integer> distances) {
+	public void setDistances(List<Integer> distances) {
 		this.distances = distances;
 	}
 
@@ -58,15 +62,12 @@ public class Knn implements Algorithm{
 	}
 	
 
-
 	public double probOutlier() {
-		DescriptiveStats ds = new DescriptiveStats(distances);
-		double mean = ds.getMean();
-		System.out.println(mean);
-		double sigma = ds.getStandardDev(mean);
-		System.out.println(sigma);
-		Gaussian gaussian = new Gaussian(); 
-		return gaussian.phi(distances.getLast(),mean,sigma);
+		Collections.sort(distances);
+		double index=distances.indexOf(value)+1;
+		double size=distances.size();
+		if(index==size|| index==size-1) return 1.5;
+		return (index/size);
 	}
 	
 
@@ -76,29 +77,27 @@ public class Knn implements Algorithm{
 	 * @param data the data
 	 */
 	public void calculate(Deque<Integer> data){
-		double max=0;
-		Deque<Integer> dist = new ArrayDeque<Integer>();
-		for(int i: data){
-			dist.addLast(distance(i,data.getLast()));		
+		distances.clear();
+		CopyOnWriteArrayList<Integer> list = new CopyOnWriteArrayList<Integer>(data);
+		for(int i: list){
+			int dist=0;
+			for(int j:list){
+				if(i!=j){
+					dist+=distance(i,j);
+				}
+			}
+			distances.add(dist/data.size());
 		}
-		DescriptiveStats stats = new DescriptiveStats(dist);
-		int meanVal=stats.getMean();
-		if(meanVal>max){
-			max=meanVal;
-		}
-		if(distances.isEmpty()){
-			distances.offerFirst(meanVal);
-		}
-		else{
-			distances.offerLast(meanVal);
-		}
-
+		value=distances.get(distances.size()-1);
 	}
 
 	@Override
 	public void deleteFirst() {
-		distances.removeFirst();
+		distances.remove(0);
 	}
 
-
+	@Override
+	public String toString(){
+		return this.distances.toString();	
+	}
 }

@@ -7,8 +7,6 @@
 <fullyQualifiedTypeName name="com.google.common.collect.ArrayListMultimap"/>
 <fullyQualifiedTypeName name="com.google.common.collect.Multiset"/>
 <fullyQualifiedTypeName name="com.google.common.collect.Multimap"/>
-<fullyQualifiedTypeName name="java.util.Iterator"/>
-<fullyQualifiedTypeName name="java.util.Collections"/>
 <fullyQualifiedTypeName name="java.io.IOException"/>
 <fullyQualifiedTypeName name="java.nio.channels.FileChannel"/>
 <fullyQualifiedTypeName name="java.io.FileInputStream"/>
@@ -22,13 +20,16 @@
 <fullyQualifiedTypeName name="java.util.logging.Logger"/>
 <fullyQualifiedTypeName name="java.util.logging.Level"/>
 <fullyQualifiedTypeName name="java.util.concurrent.locks.ReentrantReadWriteLock"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="Compute"/>
 <fullyQualifiedTypeName name="java.util.concurrent.locks.ReadWriteLock"/>
 <fullyQualifiedTypeName name="java.util.concurrent.locks.Lock"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="Algorithms.Density"/>
-<fullyQualifiedTypeName name="java.util.Deque"/>
 <fullyQualifiedTypeName name="org.apache.commons.math3.analysis.function.Gaussian"/>
+<fullyQualifiedTypeName name="java.util.Deque"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.Collections"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="java.util.concurrent.CopyOnWriteArrayList"/>
 </qualifiedTypeNameHistroy>

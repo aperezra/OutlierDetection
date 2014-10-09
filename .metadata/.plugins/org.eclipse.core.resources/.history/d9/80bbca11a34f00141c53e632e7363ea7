@@ -1,0 +1,49 @@
+package Algorithms;
+
+import java.util.ArrayDeque;
+import java.util.Deque;
+
+public class Statistic implements Algorithm {
+
+	double probOutlier;
+	
+	public Statistic(){
+		super();
+		this.probOutlier=0;
+	}
+	
+	
+	@Override
+	public void calculate(Deque<Integer> data) {	
+		Deque<Integer> trial = new ArrayDeque<Integer>(data);
+		DescriptiveStats ds = new DescriptiveStats(trial);
+		int mean = ds.getMean();
+		double sigma = ds.getStandardDev(mean);
+		System.out.println("mean: "+mean);
+		System.out.println("sigma: "+sigma);
+		if(data.getLast()>mean){
+			this.probOutlier=data.getLast()/(mean+sigma);
+		}
+		if(data.getLast()<mean){
+			this.probOutlier=data.getLast()/(mean-sigma);
+		}
+	}
+
+	@Override
+	public double probOutlier() {
+		return probOutlier;
+	}
+
+	@Override
+	public int getSize() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void deleteFirst() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

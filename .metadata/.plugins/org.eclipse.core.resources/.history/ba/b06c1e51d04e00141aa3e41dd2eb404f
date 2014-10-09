@@ -1,0 +1,71 @@
+package Algorithms;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Deque;
+import java.util.List;
+
+
+// TODO: Auto-generated Javadoc
+/**
+ * The Class Hull.
+ */
+public class Hull implements Algorithm{
+
+	/** The hulls. */
+	public List<Integer> hulls;
+
+	/**
+	 * Instantiates a new hull.
+	 */
+	public Hull(){
+		super();
+		this.hulls=new ArrayList<Integer>();
+	}
+
+
+	/**
+	 * Gets the hulls.
+	 *
+	 * @return the hulls
+	 */
+	public List<Integer> getHulls() {
+		return hulls;
+	}
+
+	@Override
+	public int getSize(){
+		return hulls.size();
+	}
+
+	@Override
+	public void deleteFirst(){
+		hulls.remove(0);
+	}
+
+	@Override
+	public double probOutlier() {
+
+
+		return 0.0;
+	}
+
+	@Override
+	public void calculate(Deque<Integer> data){
+		hulls.clear();
+		int value = data.getLast();
+		hulls = new ArrayList<Integer>(data);
+		Collections.sort(hulls);
+		hulls.indexOf(value);
+	}
+
+	@Override
+	public String toString(){
+		return this.hulls.toString();
+
+	}
+
+
+
+
+}
