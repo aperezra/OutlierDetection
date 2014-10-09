@@ -66,7 +66,7 @@ public class WriteRead {
 		r.lock();
 		try{
 			algorithm.calculate(info.get(key));
-			if (key.equals("es Hosni_Mubarak") && algorithm.probOutlier()>1){
+			if (key.equals("de Hauptseite") && algorithm.probOutlier()>2){
 				numOutliers++;
 				System.out.println(numOutliers + " "+nameFile + " "+algorithm.probOutlier());
 				System.out.println(algorithm.toString());
@@ -91,7 +91,7 @@ public class WriteRead {
 		}
 	}
 	public static void main (String[] args){
-		WriteRead wr = new WriteRead(new HashMap<String, Deque<Integer>>(), 8);
+		WriteRead wr = new WriteRead(new HashMap<String, Deque<Integer>>(), 15);
 		FileManager fm = new FileManager();
 		String rootDirectory = "/Users/alvaro/Documents/TUGraz/Master Thesis/TrainingSet/";
 		List<File> files = fm.listDirectories(rootDirectory);
@@ -115,7 +115,7 @@ public class WriteRead {
 			}
 		}
 		for(String key: wr.getInfo().keySet()){
-			ThreadReader tr = new ThreadReader(wr, key, new Density());
+			ThreadReader tr = new ThreadReader(wr, key, new Statistic());
 			Thread reader = new Thread(tr);
 			reader.start();
 		}

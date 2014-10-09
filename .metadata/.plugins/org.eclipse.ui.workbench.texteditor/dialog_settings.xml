@@ -3,18 +3,19 @@
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="263" key="DIALOG_WIDTH"/>
 		<item value="135" key="DIALOG_Y_ORIGIN"/>
-		<item value="849" key="DIALOG_X_ORIGIN"/>
 		<item value="399" key="DIALOG_HEIGHT"/>
+		<item value="849" key="DIALOG_X_ORIGIN"/>
 		<item value="1|Lucida Grande|11.0|0|COCOA|1|LucidaGrande" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="true" key="wrap"/>
-		<item value="false" key="casesensitive"/>
 		<item value="false" key="isRegEx"/>
+		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
 		<item value="0.0" key="selection"/>
 		<list key="findhistory">
+			<item value="20110110"/>
 			<item value="0.0"/>
 			<item value="3."/>
 			<item value="System"/>
@@ -22,7 +23,6 @@
 			<item value="138"/>
 			<item value="static"/>
 			<item value="system"/>
-			<item value="es Franz_Welser-M%C3%B6st&#x0A;"/>
 		</list>
 		<list key="replacehistory">
 			<item value="hull"/>
