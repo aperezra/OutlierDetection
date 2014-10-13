@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.nio.channels.FileChannel;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Deque;
 import java.util.HashMap;
 import java.util.List;
@@ -123,6 +124,7 @@ public class FileManager {
 			}
 			
 		}
+		Collections.sort(files);
 		return files;
 
 

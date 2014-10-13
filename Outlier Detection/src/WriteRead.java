@@ -4,7 +4,9 @@ import java.util.Deque;
 import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
+
 import Algorithms.*;
 public class WriteRead {
 	
@@ -50,7 +52,7 @@ public class WriteRead {
 			writer.parse(file, this.info);
 			keysExist=true;
 			try{
-				Thread.sleep(100);
+				Thread.sleep(500);
 			} catch (InterruptedException e){
 				e.printStackTrace();
 			}
@@ -68,9 +70,9 @@ public class WriteRead {
 			algorithm.calculate(info.get(key));
 			if (key.equals("de Hauptseite") && algorithm.probOutlier()>2){
 				numOutliers++;
-				System.out.println(numOutliers + " "+nameFile + " "+algorithm.probOutlier());
-				System.out.println(algorithm.toString());
-				System.out.println(info.get(key));
+				System.out.println(numOutliers + " "+nameFile);
+				//System.out.println(algorithm.toString());
+				//System.out.println(info.get(key));
 			}
 			info.get(key).removeFirst();
 			count++;
@@ -78,7 +80,7 @@ public class WriteRead {
 				needValues=true;
 			}
 			try{
-				Thread.sleep(100);
+				Thread.sleep(500);
 			} catch (InterruptedException e){
 				e.printStackTrace();
 			}
@@ -93,7 +95,7 @@ public class WriteRead {
 	public static void main (String[] args){
 		WriteRead wr = new WriteRead(new HashMap<String, Deque<Integer>>(), 15);
 		FileManager fm = new FileManager();
-		String rootDirectory = "/Users/alvaro/Documents/TUGraz/Master Thesis/TrainingSet/";
+		String rootDirectory = "/Volumes/My Passport/subset/";
 		List<File> files = fm.listDirectories(rootDirectory);
 		while(files.isEmpty()){
 			try {
@@ -105,6 +107,7 @@ public class WriteRead {
 		}
 		ThreadWriter tw= new ThreadWriter(wr, files, fm);
 		Thread writer = new Thread(tw);
+		writer.setName("Writer");
 		writer.start();
 		while(!wr.isKeysExist()){
 			try {
@@ -117,6 +120,7 @@ public class WriteRead {
 		for(String key: wr.getInfo().keySet()){
 			ThreadReader tr = new ThreadReader(wr, key, new Statistic());
 			Thread reader = new Thread(tr);
+			reader.setName("Reader: "+key);
 			reader.start();
 		}
 	}
