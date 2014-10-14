@@ -66,7 +66,7 @@ public class Knn implements Algorithm{
 		Collections.sort(distances);
 		double index=distances.indexOf(value)+1;
 		double size=distances.size();
-		if(index==size) return 1.5;
+		if(index==size || index==size) return 1.5;
 		return (index/size);
 	}
 	

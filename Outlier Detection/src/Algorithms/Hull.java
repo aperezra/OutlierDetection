@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Deque;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 
 // TODO: Auto-generated Javadoc
@@ -59,11 +60,12 @@ public class Hull implements Algorithm{
 
 	@Override
 	public void calculate(Deque<Integer> data){
+		CopyOnWriteArrayList<Integer> list = new CopyOnWriteArrayList<Integer>(data);
+		hulls.clear();
 		DescriptiveStats ds = new DescriptiveStats(data);
 		this.sigma = ds.getStandardDev(ds.getMean());
 		this.value = data.getLast();
-		hulls.clear();
-		hulls.addAll(data);
+		hulls.addAll(list);
 		Collections.sort(hulls);
 	}
 

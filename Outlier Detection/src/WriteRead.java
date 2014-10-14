@@ -4,12 +4,11 @@ import java.util.Deque;
 import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 import Algorithms.*;
 public class WriteRead {
-	
+
 	private final ReentrantReadWriteLock rwl = new ReentrantReadWriteLock();
 	private final Lock r = rwl.readLock();
 	private final Lock w = rwl.writeLock();
@@ -21,7 +20,7 @@ public class WriteRead {
 	public int winsize;
 	public int numOutliers;
 	public String nameFile;
-	
+
 	public WriteRead(HashMap<String, Deque<Integer>> info, int winsize){
 		this.info=info;
 		controlRead=true;
@@ -43,6 +42,7 @@ public class WriteRead {
 	public boolean isKeysExist() {
 		return keysExist;
 	}
+	
 	public void write(File file, FileManager writer) throws InterruptedException{
 		if(needValues && !rwl.isWriteLocked()){
 			w.tryLock();
@@ -64,15 +64,16 @@ public class WriteRead {
 			}
 		}
 	}
+	
 	public void compute(String key, Algorithm algorithm) throws Exception{
 		r.lock();
 		try{
 			algorithm.calculate(info.get(key));
-			if (key.equals("de Hauptseite") && algorithm.probOutlier()>2){
+			if (key.equals("es Hosni_Mubarak") && algorithm.probOutlier()>1){
 				numOutliers++;
 				System.out.println(numOutliers + " "+nameFile);
 				//System.out.println(algorithm.toString());
-				//System.out.println(info.get(key));
+				System.out.println(info.get(key));
 			}
 			info.get(key).removeFirst();
 			count++;
@@ -93,9 +94,9 @@ public class WriteRead {
 		}
 	}
 	public static void main (String[] args){
-		WriteRead wr = new WriteRead(new HashMap<String, Deque<Integer>>(), 15);
+		WriteRead wr = new WriteRead(new HashMap<String, Deque<Integer>>(),10);
 		FileManager fm = new FileManager();
-		String rootDirectory = "/Volumes/My Passport/subset/";
+		String rootDirectory = "/Users/alvaro/Documents/TUGraz/Master Thesis/TrainingSet";
 		List<File> files = fm.listDirectories(rootDirectory);
 		while(files.isEmpty()){
 			try {
@@ -118,7 +119,7 @@ public class WriteRead {
 			}
 		}
 		for(String key: wr.getInfo().keySet()){
-			ThreadReader tr = new ThreadReader(wr, key, new Statistic());
+			ThreadReader tr = new ThreadReader(wr, key, new Hull());
 			Thread reader = new Thread(tr);
 			reader.setName("Reader: "+key);
 			reader.start();

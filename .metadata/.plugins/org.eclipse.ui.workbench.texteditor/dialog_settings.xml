@@ -13,16 +13,16 @@
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="0.0" key="selection"/>
+		<item value="" key="selection"/>
 		<list key="findhistory">
+			<item value="System.out.println"/>
+			<item value="reach"/>
+			<item value="System."/>
+			<item value="densities"/>
+			<item value="distances"/>
 			<item value="20110110"/>
 			<item value="0.0"/>
 			<item value="3."/>
-			<item value="System"/>
-			<item value="knn"/>
-			<item value="138"/>
-			<item value="static"/>
-			<item value="system"/>
 		</list>
 		<list key="replacehistory">
 			<item value="hull"/>
