@@ -1,5 +1,7 @@
 package Algorithms;
-import java.util.Deque;;
+
+import java.util.Collections;
+import java.util.concurrent.CopyOnWriteArrayList;
 // TODO: Auto-generated Javadoc
 /**
  * From a Deque of integers compute the min, max, avg, med, & stand deviation.
@@ -8,7 +10,7 @@ public class DescriptiveStats
 {
 
 	/** The values. */
-	Deque<Integer> values; 
+	CopyOnWriteArrayList<Integer> values;
 
 
 	/**
@@ -16,7 +18,7 @@ public class DescriptiveStats
 	 *
 	 * @param values the values
 	 */
-	public DescriptiveStats(Deque<Integer> values) {
+	public DescriptiveStats(CopyOnWriteArrayList<Integer> values) {
 		this.values = values;
 	}
 
@@ -29,7 +31,7 @@ public class DescriptiveStats
 	 *
 	 * @return the values
 	 */
-	public Deque<Integer> getvalues() {
+	public CopyOnWriteArrayList<Integer> getvalues() {
 		return values;
 	}
 
@@ -39,7 +41,7 @@ public class DescriptiveStats
 	 *
 	 * @param values the new values
 	 */
-	public void setvalues(Deque<Integer> values) {
+	public void setvalues(CopyOnWriteArrayList<Integer> values) {
 		this.values = values;
 	}
 
@@ -51,7 +53,7 @@ public class DescriptiveStats
 	 */
 	public int getMin()
 	{
-		int min = values.getFirst();
+		int min = values.get(0);
 		for(int i: values){      
 			if(min>i){
 				min=i;
@@ -67,7 +69,7 @@ public class DescriptiveStats
 	 */
 	public int getMax()
 	{
-		int max = values.getFirst();
+		int max = values.get(0);
 		for(int i: values){
 			if(max<i)
 				max=i;
@@ -76,20 +78,20 @@ public class DescriptiveStats
 	}
 
 
-//	/**
-//	 * Gets the median.
-//	 *
-//	 * @return the median
-//	 */
-//	public int getMedian()
-//	{
-//		Collections.sort(values);
-//		int middle = values.size()/2;
-//		if(values.size()%2==1){
-//			return values.get(middle);
-//		}
-//		return (values.get(middle-1) + values.get(middle));
-//	}
+	/**
+	 * Gets the median.
+	 *
+	 * @return the median
+	 */
+	public int getMedian()
+	{
+		Collections.sort(values);
+		int middle = values.size()/2;
+		if(values.size()%2==1){
+			return values.get(middle);
+		}
+		return (values.get(middle-1) + values.get(middle));
+	}
 
 
 	/**

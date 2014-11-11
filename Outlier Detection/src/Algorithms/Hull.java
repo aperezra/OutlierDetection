@@ -26,7 +26,7 @@ public class Hull implements Algorithm{
 		this.hulls=new ArrayList<Integer>();
 		this.value=0;
 		this.sigma=0;
-	
+
 	}
 
 
@@ -53,16 +53,61 @@ public class Hull implements Algorithm{
 	public double probOutlier() {
 		double size=hulls.size();
 		int index=hulls.indexOf(value);
-		if(index==0 && hulls.get(index+1)>hulls.get(index)+sigma) return 1.5;
-		if(index==size-1 && hulls.get(index-1)<hulls.get(index)-sigma) return 1.5;
+
+		if(index==0){ 
+			if(hulls.get(index+1)>hulls.get(index)+sigma){
+				return 1.5;
+			}
+			if(hulls.get(index+1)>hulls.get(index)+2*sigma){
+				return 2.0;
+			}
+			else{
+				return 1.0;
+			}
+		}
+		if(index==1){
+			if(hulls.get(index-1)>hulls.get(index)+sigma){
+				return 1.0; 
+			}
+			if(hulls.get(index-1)>hulls.get(index)+2*sigma){
+				return 0.75;
+			}
+			else{
+				return 1.5;
+			}
+		}
+		if(index==size-1){
+			if(hulls.get(index-1)<hulls.get(index)+sigma){
+				return 1.5; 
+			}
+			if(hulls.get(index-1)<hulls.get(index)+2*sigma){
+				return 2.0;
+			}
+			else{
+				return 1.0;
+			}
+		}	
+		if(index==size-2){
+			if(hulls.get(index+1)>hulls.get(index)+sigma){
+				return 1.0;
+			}
+			if(hulls.get(index+1)>hulls.get(index)+2*sigma){
+				return 0.75;
+			}
+			else{
+				return 1.5;
+			}
+		}
 		return 0.0;
-	}
+	} 
+
 
 	@Override
 	public void calculate(Deque<Integer> data){
 		CopyOnWriteArrayList<Integer> list = new CopyOnWriteArrayList<Integer>(data);
 		hulls.clear();
-		DescriptiveStats ds = new DescriptiveStats(data);
+		list.remove(list.size()-1);
+		DescriptiveStats ds = new DescriptiveStats(list);
 		this.sigma = ds.getStandardDev(ds.getMean());
 		this.value = data.getLast();
 		hulls.addAll(list);

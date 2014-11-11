@@ -59,7 +59,7 @@ public class Density implements Algorithm {
 	 */
 	public void calculate(Deque<Integer> data){
 		double sum=0;
-		int k=5;
+		int k=3;
 		CopyOnWriteArrayList<Integer> list = new CopyOnWriteArrayList<Integer>(data);
 		int[] knn = knn(list,k);
 		for (int i=0; i<knn.length;i++){

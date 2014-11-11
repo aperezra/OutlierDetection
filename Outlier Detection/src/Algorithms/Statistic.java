@@ -1,7 +1,7 @@
 package Algorithms;
 
-import java.util.ArrayDeque;
 import java.util.Deque;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class Statistic implements Algorithm {
 
@@ -17,8 +17,9 @@ public class Statistic implements Algorithm {
 	
 	@Override
 	public void calculate(Deque<Integer> data) {	
-		Deque<Integer> trial = new ArrayDeque<Integer>(data);
-		DescriptiveStats ds = new DescriptiveStats(trial);
+		CopyOnWriteArrayList<Integer> list = new CopyOnWriteArrayList<Integer>(data);
+		list.remove(list.size()-1);
+		DescriptiveStats ds = new DescriptiveStats(list);
 		this.mean = ds.getMean();
 		this.sigma = ds.getStandardDev(mean);
 		if(data.getLast()>mean){

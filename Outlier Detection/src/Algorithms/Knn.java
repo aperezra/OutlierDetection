@@ -1,12 +1,12 @@
 package Algorithms;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Deque;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 
+// TODO: Auto-generated Javadoc
 /**
  * The Class Algorithms. 
  *
@@ -16,7 +16,9 @@ public class Knn implements Algorithm{
 
 	/** The distances. */
 	public List<Integer> distances;
-	public int value;
+	/** The value. */
+	public double mean;
+	public double nn;
 
 	/**
 	 * Instantiates a new algorithms.
@@ -24,8 +26,8 @@ public class Knn implements Algorithm{
 	public Knn() {
 		super();
 		this.distances = new ArrayList<Integer>();
-		value=0;
-
+		this.mean=0;
+		this.nn=0;
 	}
 
 	/**
@@ -46,6 +48,9 @@ public class Knn implements Algorithm{
 		this.distances = distances;
 	}
 
+	/* (non-Javadoc)
+	 * @see Algorithms.Algorithm#getSize()
+	 */
 	public int getSize(){
 		return distances.size();
 	}
@@ -62,12 +67,13 @@ public class Knn implements Algorithm{
 	}
 	
 
+	/* (non-Javadoc)
+	 * @see Algorithms.Algorithm#probOutlier()
+	 */
 	public double probOutlier() {
-		Collections.sort(distances);
-		double index=distances.indexOf(value)+1;
-		double size=distances.size();
-		if(index==size || index==size) return 1.5;
-		return (index/size);
+		this.nn = 1.0 - this.nn;
+		return this.nn;
+		
 	}
 	
 
@@ -78,26 +84,52 @@ public class Knn implements Algorithm{
 	 */
 	public void calculate(Deque<Integer> data){
 		distances.clear();
+		int calc = 0;
+		this.nn=0;
 		CopyOnWriteArrayList<Integer> list = new CopyOnWriteArrayList<Integer>(data);
-		for(int i: list){
-			int dist=0;
-			for(int j:list){
-				if(i!=j){
-					dist+=distance(i,j);
-				}
-			}
-			distances.add(dist/data.size());
+		//DescriptiveStats ds = new DescriptiveStats(list);
+		for (int i=0;i<list.size()-1;i++){
+			int dist= distance(list.get(i),list.get(list.size()-1));
+			distances.add(dist);
+			calc+=dist;
 		}
-		value=distances.get(distances.size()-1);
+		calc=calc/list.size();
+		//double sigma = ds.getStandardDev(mean);
+		for (int i=0; i<distances.size()-2;i++){
+			if(distances.get(i)<calc){
+				this.nn++;
+			}
+		}
+		this.nn=(nn/distances.size());
+		this.mean = calc;
 	}
-
+	
+	
+	
+//	/**
+//	 * Knn.
+//	 *
+//	 * @param data the data
+//	 * @param k the k
+//	 * @return the int[]
+//	 */
+//	public int[] knn(List<Integer> data, int k){
+//
+//	}
+	
+	/* (non-Javadoc)
+	 * @see Algorithms.Algorithm#deleteFirst()
+	 */
 	@Override
 	public void deleteFirst() {
 		distances.remove(0);
 	}
 
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
 	@Override
 	public String toString(){
-		return this.distances.toString();	
+		return this.distances.toString() +" "+ this.mean + " " +this.nn;	
 	}
 }

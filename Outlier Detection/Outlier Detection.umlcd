@@ -1,0 +1,1408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.yattasolutions.uml.diagrams.classifier:ClassDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.yattasolutions.diagrams="http://ns.yatta-solutions.com/umllab/diagrams/1.1.0" xmlns:com.yattasolutions.uml.diagrams.classifier="http://ns.yatta-solutions.com/umllab/diagrams/classifier/1.1.0" xmi:id="_t6eb8GNhEeS1krHrX10kLw">
+  <modelElement href="Outlier%20Detection.uml#_uJvnAGNhEeS1krHrX10kLw"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_uQVXMGNhEeS1krHrX10kLw" sourceAnchor="21.0,0.0" targetAnchor="139.0,402.0" target="_uQr8iWNhEeS1krHrX10kLw" source="_uQWlWWNhEeS1krHrX10kLw">
+    <modelElement href="Outlier%20Detection.uml#_uN5uQGNhEeS1krHrX10kLw"/>
+    <stereotypes xmi:id="_uQVXMWNhEeS1krHrX10kLw" name="Reference">
+      <modelElement href="Outlier%20Detection.uml#_uN5uQmNhEeS1krHrX10kLw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_uQVXMmNhEeS1krHrX10kLw" text="">
+      <visualProperties xmi:id="_y2uTgGNhEeS1krHrX10kLw" position="41.5,-25.0"/>
+    </nameVisual>
+    <sourceRole xmi:id="_uQVXM2NhEeS1krHrX10kLw" aggregationKind="NONE" name="">
+      <modelElement href="Outlier%20Detection.uml#_uN5uQWNhEeS1krHrX10kLw"/>
+      <visualProperties xmi:id="_y2tscmNhEeS1krHrX10kLw" position="2.5,-45.33333333333333"/>
+      <visibility xmi:id="_uQVXNGNhEeS1krHrX10kLw" label="+"/>
+      <cardinality xmi:id="_uQVXNWNhEeS1krHrX10kLw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_uQVXNmNhEeS1krHrX10kLw" aggregationKind="NONE" name="wr" navigable="true">
+      <modelElement href="Outlier%20Detection.uml#_uNjwAWNhEeS1krHrX10kLw"/>
+      <visualProperties xmi:id="_y2uTgWNhEeS1krHrX10kLw" position="-28.5,4.333333333333343"/>
+      <visibility xmi:id="_uQVXN2NhEeS1krHrX10kLw" label="+"/>
+      <cardinality xmi:id="_uQVXOGNhEeS1krHrX10kLw" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_uQV-QGNhEeS1krHrX10kLw" source="_uQWlWWNhEeS1krHrX10kLw">
+    <modelElement href="Outlier%20Detection.uml#_uN5uQ2NhEeS1krHrX10kLw"/>
+    <stereotypes xmi:id="_uQV-QWNhEeS1krHrX10kLw" name="Reference">
+      <modelElement href="Outlier%20Detection.uml#_uN6VUGNhEeS1krHrX10kLw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_uQV-QmNhEeS1krHrX10kLw" text=""/>
+    <sourceRole xmi:id="_uQV-Q2NhEeS1krHrX10kLw" aggregationKind="NONE" name="">
+      <modelElement href="Outlier%20Detection.uml#_uN5uRGNhEeS1krHrX10kLw"/>
+      <visibility xmi:id="_uQV-RGNhEeS1krHrX10kLw" label="+"/>
+      <cardinality xmi:id="_uQV-RWNhEeS1krHrX10kLw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_uQV-RmNhEeS1krHrX10kLw" aggregationKind="NONE" name="files" navigable="true">
+      <modelElement href="Outlier%20Detection.uml#_uNjwA2NhEeS1krHrX10kLw"/>
+      <visibility xmi:id="_uQV-R2NhEeS1krHrX10kLw" label="+"/>
+      <cardinality xmi:id="_uQV-SGNhEeS1krHrX10kLw" label="1..*" max="-1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_uQWlUGNhEeS1krHrX10kLw" sourceAnchor="97.0,114.0" targetAnchor="237.0,0.0" target="_uQgWUGNhEeS1krHrX10kLw" source="_uQWlWWNhEeS1krHrX10kLw">
+    <modelElement href="Outlier%20Detection.uml#_uN6VUWNhEeS1krHrX10kLw"/>
+    <stereotypes xmi:id="_uQWlUWNhEeS1krHrX10kLw" name="Reference">
+      <modelElement href="Outlier%20Detection.uml#_uN68YGNhEeS1krHrX10kLw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_uQWlUmNhEeS1krHrX10kLw" text="">
+      <visualProperties xmi:id="_y2u6kWNhEeS1krHrX10kLw" position="-40.0,-15.0"/>
+    </nameVisual>
+    <sourceRole xmi:id="_uQWlU2NhEeS1krHrX10kLw" aggregationKind="NONE" name="">
+      <modelElement href="Outlier%20Detection.uml#_uN6VUmNhEeS1krHrX10kLw"/>
+      <visualProperties xmi:id="_y2u6kGNhEeS1krHrX10kLw" position="-55.0,1.0"/>
+      <visibility xmi:id="_uQWlVGNhEeS1krHrX10kLw" label="+"/>
+      <cardinality xmi:id="_uQWlVWNhEeS1krHrX10kLw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_uQWlVmNhEeS1krHrX10kLw" aggregationKind="NONE" name="fm" navigable="true">
+      <modelElement href="Outlier%20Detection.uml#_uNkXEWNhEeS1krHrX10kLw"/>
+      <visualProperties xmi:id="_y2vhoGNhEeS1krHrX10kLw" position="2.0,-43.0"/>
+      <visibility xmi:id="_uQWlV2NhEeS1krHrX10kLw" label="+"/>
+      <cardinality xmi:id="_uQWlWGNhEeS1krHrX10kLw" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_uQZooGNhEeS1krHrX10kLw" sourceAnchor="101.0,0.0" targetAnchor="15.0,402.0" target="_uQr8iWNhEeS1krHrX10kLw" source="_uQcE6WNhEeS1krHrX10kLw">
+    <modelElement href="Outlier%20Detection.uml#_uN4gI2NhEeS1krHrX10kLw"/>
+    <stereotypes xmi:id="_uQa2wmNhEeS1krHrX10kLw" name="Reference">
+      <modelElement href="Outlier%20Detection.uml#_uN5HMGNhEeS1krHrX10kLw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_uQaPsGNhEeS1krHrX10kLw" text="">
+      <visualProperties xmi:id="_y2wIsGNhEeS1krHrX10kLw" position="41.0,10.999999999999993"/>
+    </nameVisual>
+    <sourceRole xmi:id="_uQa2wGNhEeS1krHrX10kLw" aggregationKind="NONE" name="">
+      <modelElement href="Outlier%20Detection.uml#_uN4gJGNhEeS1krHrX10kLw"/>
+      <visualProperties xmi:id="_y2vhoWNhEeS1krHrX10kLw" position="-16.0,-45.66666666666667"/>
+      <visibility xmi:id="_uQa2xGNhEeS1krHrX10kLw" label="+"/>
+      <cardinality xmi:id="_uQa2w2NhEeS1krHrX10kLw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_uQa2wWNhEeS1krHrX10kLw" aggregationKind="NONE" name="wr" navigable="true">
+      <modelElement href="Outlier%20Detection.uml#_uNih4WNhEeS1krHrX10kLw"/>
+      <visualProperties xmi:id="_y2wIsWNhEeS1krHrX10kLw" position="2.0,4.666666666666671"/>
+      <visibility xmi:id="_uQa2xmNhEeS1krHrX10kLw" label="+"/>
+      <cardinality xmi:id="_uQa2xWNhEeS1krHrX10kLw" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_uQcE4GNhEeS1krHrX10kLw" sourceAnchor="71.0,0.0" targetAnchor="180.0,62.0" target="_uRrbAGNhEeS1krHrX10kLw" source="_uQcE6WNhEeS1krHrX10kLw">
+    <modelElement href="Outlier%20Detection.uml#_uN5HMWNhEeS1krHrX10kLw"/>
+    <bendpoints xmi:id="_ERw0wGNnEeS1krHrX10kLw" sourceY="-71" targetX="196"/>
+    <stereotypes xmi:id="_uQcE4WNhEeS1krHrX10kLw" name="Reference">
+      <modelElement href="Outlier%20Detection.uml#_uN5HM2NhEeS1krHrX10kLw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_uQcE4mNhEeS1krHrX10kLw" text="">
+      <visualProperties xmi:id="_y2wvwWNhEeS1krHrX10kLw" position="-79.0,1.000000000000007"/>
+    </nameVisual>
+    <sourceRole xmi:id="_uQcE42NhEeS1krHrX10kLw" aggregationKind="NONE" name="">
+      <modelElement href="Outlier%20Detection.uml#_uN5HMmNhEeS1krHrX10kLw"/>
+      <visualProperties xmi:id="_y2wvwGNhEeS1krHrX10kLw" position="-16.0,-52.0"/>
+      <visibility xmi:id="_uQcE5GNhEeS1krHrX10kLw" label="+"/>
+      <cardinality xmi:id="_uQcE5WNhEeS1krHrX10kLw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_uQcE5mNhEeS1krHrX10kLw" aggregationKind="NONE" name="algorithm" navigable="true">
+      <modelElement href="Outlier%20Detection.uml#_uNjI82NhEeS1krHrX10kLw"/>
+      <visualProperties xmi:id="_y2xW0GNhEeS1krHrX10kLw" position="33.99999999999997,-43.000000000000014"/>
+      <visibility xmi:id="_uQcE52NhEeS1krHrX10kLw" label="+"/>
+      <cardinality xmi:id="_uQcE6GNhEeS1krHrX10kLw" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_uQfIMWNhEeS1krHrX10kLw" targetItem="_uQgWUGNhEeS1krHrX10kLw" sourceItem="_uQfIMGNhEeS1krHrX10kLw"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_uQknwGNhEeS1krHrX10kLw" source="_uQr8iWNhEeS1krHrX10kLw">
+    <modelElement href="Outlier%20Detection.uml#_uN8KgWNhEeS1krHrX10kLw"/>
+    <stereotypes xmi:id="_uQo5M2NhEeS1krHrX10kLw" name="Reference">
+      <modelElement href="Outlier%20Detection.uml#_uN8Kg2NhEeS1krHrX10kLw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_uQo5MGNhEeS1krHrX10kLw" text=""/>
+    <sourceRole xmi:id="_uQo5MWNhEeS1krHrX10kLw" aggregationKind="NONE" name="">
+      <modelElement href="Outlier%20Detection.uml#_uN8KgmNhEeS1krHrX10kLw"/>
+      <visibility xmi:id="_uQpgQWNhEeS1krHrX10kLw" label="+"/>
+      <cardinality xmi:id="_uQpgQGNhEeS1krHrX10kLw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_uQo5MmNhEeS1krHrX10kLw" aggregationKind="NONE" name="info" navigable="true">
+      <modelElement href="Outlier%20Detection.uml#_uNmMQWNhEeS1krHrX10kLw"/>
+      <visibility xmi:id="_uQpgQ2NhEeS1krHrX10kLw" label="+"/>
+      <cardinality xmi:id="_uQpgQmNhEeS1krHrX10kLw" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_uQquYGNhEeS1krHrX10kLw" source="_uQr8iWNhEeS1krHrX10kLw">
+    <modelElement href="Outlier%20Detection.uml#_uN68YWNhEeS1krHrX10kLw"/>
+    <stereotypes xmi:id="_uQquYWNhEeS1krHrX10kLw" name="Reference">
+      <modelElement href="Outlier%20Detection.uml#_uN68Y2NhEeS1krHrX10kLw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_uQquYmNhEeS1krHrX10kLw" text=""/>
+    <sourceRole xmi:id="_uQquY2NhEeS1krHrX10kLw" aggregationKind="NONE" name="">
+      <modelElement href="Outlier%20Detection.uml#_uN68YmNhEeS1krHrX10kLw"/>
+      <visibility xmi:id="_uQquZGNhEeS1krHrX10kLw" label="+"/>
+      <cardinality xmi:id="_uQquZWNhEeS1krHrX10kLw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_uQquZmNhEeS1krHrX10kLw" aggregationKind="NONE" name="rwl" navigable="true">
+      <modelElement href="Outlier%20Detection.uml#_uNk-IGNhEeS1krHrX10kLw"/>
+      <visibility xmi:id="_uQquZ2NhEeS1krHrX10kLw" label="-"/>
+      <cardinality xmi:id="_uQquaGNhEeS1krHrX10kLw" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_uQrVcGNhEeS1krHrX10kLw" source="_uQr8iWNhEeS1krHrX10kLw">
+    <modelElement href="Outlier%20Detection.uml#_uN68ZGNhEeS1krHrX10kLw"/>
+    <stereotypes xmi:id="_uQrVcWNhEeS1krHrX10kLw" name="Reference">
+      <modelElement href="Outlier%20Detection.uml#_uN7jcGNhEeS1krHrX10kLw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_uQrVcmNhEeS1krHrX10kLw" text=""/>
+    <sourceRole xmi:id="_uQrVc2NhEeS1krHrX10kLw" aggregationKind="NONE" name="">
+      <modelElement href="Outlier%20Detection.uml#_uN68ZWNhEeS1krHrX10kLw"/>
+      <visibility xmi:id="_uQrVdGNhEeS1krHrX10kLw" label="+"/>
+      <cardinality xmi:id="_uQrVdWNhEeS1krHrX10kLw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_uQrVdmNhEeS1krHrX10kLw" aggregationKind="NONE" name="r" navigable="true">
+      <modelElement href="Outlier%20Detection.uml#_uNllMGNhEeS1krHrX10kLw"/>
+      <visibility xmi:id="_uQrVd2NhEeS1krHrX10kLw" label="-"/>
+      <cardinality xmi:id="_uQrVeGNhEeS1krHrX10kLw" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_uQr8gGNhEeS1krHrX10kLw" source="_uQr8iWNhEeS1krHrX10kLw">
+    <modelElement href="Outlier%20Detection.uml#_uN7jcWNhEeS1krHrX10kLw"/>
+    <stereotypes xmi:id="_uQr8gWNhEeS1krHrX10kLw" name="Reference">
+      <modelElement href="Outlier%20Detection.uml#_uN8KgGNhEeS1krHrX10kLw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_uQr8gmNhEeS1krHrX10kLw" text=""/>
+    <sourceRole xmi:id="_uQr8g2NhEeS1krHrX10kLw" aggregationKind="NONE" name="">
+      <modelElement href="Outlier%20Detection.uml#_uN7jcmNhEeS1krHrX10kLw"/>
+      <visibility xmi:id="_uQr8hGNhEeS1krHrX10kLw" label="+"/>
+      <cardinality xmi:id="_uQr8hWNhEeS1krHrX10kLw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_uQr8hmNhEeS1krHrX10kLw" aggregationKind="NONE" name="w" navigable="true">
+      <modelElement href="Outlier%20Detection.uml#_uNllM2NhEeS1krHrX10kLw"/>
+      <visibility xmi:id="_uQr8h2NhEeS1krHrX10kLw" label="-"/>
+      <cardinality xmi:id="_uQr8iGNhEeS1krHrX10kLw" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_uQ27oWNhEeS1krHrX10kLw" targetItem="_uQ7NEGNhEeS1krHrX10kLw" sourceItem="_uQ27oGNhEeS1krHrX10kLw"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_uQ3isGNhEeS1krHrX10kLw" targetItem="_uQ7NG2NhEeS1krHrX10kLw" sourceItem="_uQ27omNhEeS1krHrX10kLw"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_uQ3ismNhEeS1krHrX10kLw" targetItem="_uQ7NIGNhEeS1krHrX10kLw" sourceItem="_uQ3isWNhEeS1krHrX10kLw"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_uQ4JwWNhEeS1krHrX10kLw" targetItem="_uQ7NJGNhEeS1krHrX10kLw" sourceItem="_uQ4JwGNhEeS1krHrX10kLw"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_uQ4Jw2NhEeS1krHrX10kLw" targetItem="_uQ7NKGNhEeS1krHrX10kLw" sourceItem="_uQ4JwmNhEeS1krHrX10kLw"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_uQ4w0WNhEeS1krHrX10kLw" targetItem="_uQ7NLGNhEeS1krHrX10kLw" sourceItem="_uQ4w0GNhEeS1krHrX10kLw"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_uQ6mAGNhEeS1krHrX10kLw" source="_uQ7NEGNhEeS1krHrX10kLw">
+    <modelElement href="Outlier%20Detection.uml#_uN4gIGNhEeS1krHrX10kLw"/>
+    <stereotypes xmi:id="_uQ6mAWNhEeS1krHrX10kLw" name="Reference">
+      <modelElement href="Outlier%20Detection.uml#_uN4gImNhEeS1krHrX10kLw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_uQ6mAmNhEeS1krHrX10kLw" text=""/>
+    <sourceRole xmi:id="_uQ6mA2NhEeS1krHrX10kLw" aggregationKind="NONE" name="">
+      <modelElement href="Outlier%20Detection.uml#_uN4gIWNhEeS1krHrX10kLw"/>
+      <visibility xmi:id="_uQ6mBGNhEeS1krHrX10kLw" label="+"/>
+      <cardinality xmi:id="_uQ6mBWNhEeS1krHrX10kLw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_uQ6mBmNhEeS1krHrX10kLw" aggregationKind="NONE" name="values" navigable="true">
+      <modelElement href="Outlier%20Detection.uml#_uNeQcWNhEeS1krHrX10kLw"/>
+      <visibility xmi:id="_uQ6mB2NhEeS1krHrX10kLw" label="~"/>
+      <cardinality xmi:id="_uQ6mCGNhEeS1krHrX10kLw" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_uQ-3cGNhEeS1krHrX10kLw" sourceAnchor="76.0,0.0" targetAnchor="90.0,131.0" dashed="true" superClass="_uRrbAGNhEeS1krHrX10kLw" subClass="_uRCh0GNhEeS1krHrX10kLw">
+    <modelElement href="Outlier%20Detection.uml#_uMziEGNhEeS1krHrX10kLw"/>
+    <bendpoints xmi:id="_ERvmo2NnEeS1krHrX10kLw" sourceY="-29" targetX="113" targetY="27"/>
+    <bendpoints xmi:id="_ERwNsGNnEeS1krHrX10kLw" sourceX="-113" sourceY="-29" targetY="27"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_uRGzQGNhEeS1krHrX10kLw" sourceAnchor="83.0,0.0" targetAnchor="90.0,131.0" dashed="true" superClass="_uRrbAGNhEeS1krHrX10kLw" subClass="_uRLEsGNhEeS1krHrX10kLw">
+    <modelElement href="Outlier%20Detection.uml#_uMxs4GNhEeS1krHrX10kLw"/>
+    <bendpoints xmi:id="_ERvmoWNnEeS1krHrX10kLw" sourceY="-29" targetX="-57" targetY="27"/>
+    <bendpoints xmi:id="_ERvmomNnEeS1krHrX10kLw" sourceX="57" sourceY="-29" targetY="27"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_uRGzQmNhEeS1krHrX10kLw" targetItem="_uRLEsGNhEeS1krHrX10kLw" sourceItem="_uRGzQWNhEeS1krHrX10kLw"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_uRHaUWNhEeS1krHrX10kLw" targetItem="_uRLEvWNhEeS1krHrX10kLw" sourceItem="_uRHaUGNhEeS1krHrX10kLw"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_uRHaU2NhEeS1krHrX10kLw" targetItem="_uRLEwmNhEeS1krHrX10kLw" sourceItem="_uRHaUmNhEeS1krHrX10kLw"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_uRIBYWNhEeS1krHrX10kLw" targetItem="_uRLEymNhEeS1krHrX10kLw" sourceItem="_uRIBYGNhEeS1krHrX10kLw"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_uRJPg2NhEeS1krHrX10kLw" targetItem="_uRLE5GNhEeS1krHrX10kLw" sourceItem="_uRJPgmNhEeS1krHrX10kLw"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_uRJ2kWNhEeS1krHrX10kLw" targetItem="_uRLE6GNhEeS1krHrX10kLw" sourceItem="_uRJ2kGNhEeS1krHrX10kLw"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_uRWD0GNhEeS1krHrX10kLw" sourceAnchor="83.0,0.0" targetAnchor="90.0,131.0" dashed="true" superClass="_uRrbAGNhEeS1krHrX10kLw" subClass="_uRZHIGNhEeS1krHrX10kLw">
+    <modelElement href="Outlier%20Detection.uml#_uMwewGNhEeS1krHrX10kLw"/>
+    <bendpoints xmi:id="_ERu_kmNnEeS1krHrX10kLw" sourceY="-28" targetX="-233" targetY="27"/>
+    <bendpoints xmi:id="_ERvmoGNnEeS1krHrX10kLw" sourceX="233" sourceY="-28" targetY="27"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_uRWD0mNhEeS1krHrX10kLw" targetItem="_uRZHIGNhEeS1krHrX10kLw" sourceItem="_uRWD0WNhEeS1krHrX10kLw"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_uRWq4WNhEeS1krHrX10kLw" targetItem="_uRZHMmNhEeS1krHrX10kLw" sourceItem="_uRWq4GNhEeS1krHrX10kLw"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_uRXR8GNhEeS1krHrX10kLw" targetItem="_uRZHN2NhEeS1krHrX10kLw" sourceItem="_uRWq4mNhEeS1krHrX10kLw"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_uRemsGNhEeS1krHrX10kLw" sourceAnchor="87.0,0.0" targetAnchor="90.0,131.0" dashed="true" superClass="_uRrbAGNhEeS1krHrX10kLw" subClass="_uRkGQ2NhEeS1krHrX10kLw">
+    <modelElement href="Outlier%20Detection.uml#_uMs0YWNhEeS1krHrX10kLw"/>
+    <bendpoints xmi:id="_ERu_kGNnEeS1krHrX10kLw" sourceY="-29" targetX="-407" targetY="27"/>
+    <bendpoints xmi:id="_ERu_kWNnEeS1krHrX10kLw" sourceX="407" sourceY="-29" targetY="27"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_uRemsWNhEeS1krHrX10kLw" source="_uRkGQ2NhEeS1krHrX10kLw">
+    <modelElement href="Outlier%20Detection.uml#_uN35EGNhEeS1krHrX10kLw"/>
+    <stereotypes xmi:id="_uRi4I2NhEeS1krHrX10kLw" name="Reference">
+      <modelElement href="Outlier%20Detection.uml#_uN35EmNhEeS1krHrX10kLw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_uRi4IGNhEeS1krHrX10kLw" text=""/>
+    <sourceRole xmi:id="_uRi4IWNhEeS1krHrX10kLw" aggregationKind="NONE" name="">
+      <modelElement href="Outlier%20Detection.uml#_uN35EWNhEeS1krHrX10kLw"/>
+      <visibility xmi:id="_uRjfMWNhEeS1krHrX10kLw" label="+"/>
+      <cardinality xmi:id="_uRjfMGNhEeS1krHrX10kLw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_uRi4ImNhEeS1krHrX10kLw" aggregationKind="NONE" name="densities" navigable="true">
+      <modelElement href="Outlier%20Detection.uml#_uNcbQGNhEeS1krHrX10kLw"/>
+      <visibility xmi:id="_uRkGQGNhEeS1krHrX10kLw" label="+"/>
+      <cardinality xmi:id="_uRjfMmNhEeS1krHrX10kLw" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_uRgb4WNhEeS1krHrX10kLw" targetItem="_uRktYGNhEeS1krHrX10kLw" sourceItem="_uRgb4GNhEeS1krHrX10kLw"/>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_uQfIMGNhEeS1krHrX10kLw" sourceConnectionVisual="_uQfIMWNhEeS1krHrX10kLw" text="The Class ReadFile.&#xA; *&#xA;@author alvaro&#xA;@class FileReader This class read and parse from a text file and store it in a HashMap" item="_uQgWUGNhEeS1krHrX10kLw">
+    <modelElement href="Outlier%20Detection.uml#_uNznpWNhEeS1krHrX10kLw"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_uQ27oGNhEeS1krHrX10kLw" sourceConnectionVisual="_uQ27oWNhEeS1krHrX10kLw" text="From a Deque of integers compute the min, max, avg, med, &amp; stand deviation." item="_uQ7NEGNhEeS1krHrX10kLw">
+    <modelElement href="Outlier%20Detection.uml#_uNzAkWNhEeS1krHrX10kLw"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_uQ27omNhEeS1krHrX10kLw" sourceConnectionVisual="_uQ3isGNhEeS1krHrX10kLw" text="Gets the values.&#xA;&#x9; *&#xA;&#x9; * @return the values" item="_uQ7NG2NhEeS1krHrX10kLw">
+    <modelElement href="Outlier%20Detection.uml#_uNzAk2NhEeS1krHrX10kLw"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_uQ3isWNhEeS1krHrX10kLw" sourceConnectionVisual="_uQ3ismNhEeS1krHrX10kLw" text="Gets the min.&#xA;&#x9; *&#xA;&#x9; * @return the min" item="_uQ7NIGNhEeS1krHrX10kLw">
+    <modelElement href="Outlier%20Detection.uml#_uNzAlWNhEeS1krHrX10kLw"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_uQ4JwGNhEeS1krHrX10kLw" sourceConnectionVisual="_uQ4JwWNhEeS1krHrX10kLw" text="Gets the max.&#xA;&#x9; *&#xA;&#x9; * @return the max" item="_uQ7NJGNhEeS1krHrX10kLw">
+    <modelElement href="Outlier%20Detection.uml#_uNzAlmNhEeS1krHrX10kLw"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_uQ4JwmNhEeS1krHrX10kLw" sourceConnectionVisual="_uQ4Jw2NhEeS1krHrX10kLw" text="Gets the mean.&#xA;&#x9; *&#xA;&#x9; * @return the mean" item="_uQ7NKGNhEeS1krHrX10kLw">
+    <modelElement href="Outlier%20Detection.uml#_uNzAl2NhEeS1krHrX10kLw"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_uQ4w0GNhEeS1krHrX10kLw" sourceConnectionVisual="_uQ4w0WNhEeS1krHrX10kLw" text="Gets the standard dev.&#xA;&#x9; *&#xA;&#x9; * @param m the m&#xA;&#x9; * @return the standard dev" item="_uQ7NLGNhEeS1krHrX10kLw">
+    <modelElement href="Outlier%20Detection.uml#_uNzAmGNhEeS1krHrX10kLw"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_uRGzQWNhEeS1krHrX10kLw" sourceConnectionVisual="_uRGzQmNhEeS1krHrX10kLw" text="The Class Algorithms. &#xA; *&#xA;@author Alvaro Perez Ramon" item="_uRLEsGNhEeS1krHrX10kLw">
+    <modelElement href="Outlier%20Detection.uml#_uNzAnGNhEeS1krHrX10kLw"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_uRHaUGNhEeS1krHrX10kLw" sourceConnectionVisual="_uRHaUWNhEeS1krHrX10kLw" text="Instantiates a new algorithms." item="_uRLEvWNhEeS1krHrX10kLw">
+    <modelElement href="Outlier%20Detection.uml#_uNzAnWNhEeS1krHrX10kLw"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_uRHaUmNhEeS1krHrX10kLw" sourceConnectionVisual="_uRHaU2NhEeS1krHrX10kLw" text="Gets the distances.&#xA;&#x9; *&#xA;&#x9; * @return the distances" item="_uRLEwmNhEeS1krHrX10kLw">
+    <modelElement href="Outlier%20Detection.uml#_uNznoGNhEeS1krHrX10kLw"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_uRIBYGNhEeS1krHrX10kLw" sourceConnectionVisual="_uRIBYWNhEeS1krHrX10kLw" text="Distance.&#xA;&#x9; *&#xA;&#x9; * @param reference the reference&#xA;&#x9; * @param val the val&#xA;&#x9; * @return the int" item="_uRLEymNhEeS1krHrX10kLw">
+    <modelElement href="Outlier%20Detection.uml#_uNznomNhEeS1krHrX10kLw"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_uRJPgmNhEeS1krHrX10kLw" sourceConnectionVisual="_uRJPg2NhEeS1krHrX10kLw" text="Calculates the distance from X to all the other points in the list.&#xA;&#x9; * And stores in a Deque the mean value of the distances to all the other points.&#xA;&#x9; * @param data the data" item="_uRLE5GNhEeS1krHrX10kLw">
+    <modelElement href="Outlier%20Detection.uml#_uNzno2NhEeS1krHrX10kLw"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_uRJ2kGNhEeS1krHrX10kLw" sourceConnectionVisual="_uRJ2kWNhEeS1krHrX10kLw" text="Knn.&#xA;&#x9; *&#xA;&#x9; * @param data the data&#xA;&#x9; * @param k the k&#xA;&#x9; * @return the int[]" item="_uRLE6GNhEeS1krHrX10kLw">
+    <modelElement href="Outlier%20Detection.uml#_uNznpGNhEeS1krHrX10kLw"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_uRWD0WNhEeS1krHrX10kLw" sourceConnectionVisual="_uRWD0mNhEeS1krHrX10kLw" text="The Class Hull." item="_uRZHIGNhEeS1krHrX10kLw">
+    <modelElement href="Outlier%20Detection.uml#_uNzAmWNhEeS1krHrX10kLw"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_uRWq4GNhEeS1krHrX10kLw" sourceConnectionVisual="_uRWq4WNhEeS1krHrX10kLw" text="Instantiates a new hull." item="_uRZHMmNhEeS1krHrX10kLw">
+    <modelElement href="Outlier%20Detection.uml#_uNzAmmNhEeS1krHrX10kLw"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_uRWq4mNhEeS1krHrX10kLw" sourceConnectionVisual="_uRXR8GNhEeS1krHrX10kLw" text="Gets the hulls.&#xA;&#x9; *&#xA;&#x9; * @return the hulls" item="_uRZHN2NhEeS1krHrX10kLw">
+    <modelElement href="Outlier%20Detection.uml#_uNzAm2NhEeS1krHrX10kLw"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_uRgb4GNhEeS1krHrX10kLw" sourceConnectionVisual="_uRgb4WNhEeS1krHrX10kLw" text="Density.&#xA;&#x9; *&#xA;&#x9; * @param data the data&#xA;&#x9; * @param p reference point to which is calculated the density&#xA;&#x9; * @param x the point to which we are calculating the density" item="_uRktYGNhEeS1krHrX10kLw">
+    <modelElement href="Outlier%20Detection.uml#_uNzAkGNhEeS1krHrX10kLw"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:InterfaceVisual" xmi:id="_uRrbAGNhEeS1krHrX10kLw" name="Algorithm" associationsIn="_uQcE4GNhEeS1krHrX10kLw" subclassedBy="_uQ-3cGNhEeS1krHrX10kLw _uRGzQGNhEeS1krHrX10kLw _uRWD0GNhEeS1krHrX10kLw _uRemsGNhEeS1krHrX10kLw">
+    <modelElement href="Outlier%20Detection.uml#_uKqNAGNhEeS1krHrX10kLw"/>
+    <visualProperties xmi:id="_uRrbAWNhEeS1krHrX10kLw" position="-334.0,-86.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_uRrbAmNhEeS1krHrX10kLw" label="+"/>
+    <attributes xmi:id="_uRrbA2NhEeS1krHrX10kLw" name="size">
+      <modelElement href="Outlier%20Detection.uml#_uKrbIGNhEeS1krHrX10kLw"/>
+      <visibility xmi:id="_uRrbBGNhEeS1krHrX10kLw" label="+"/>
+      <cardinality xmi:id="_uRrbBWNhEeS1krHrX10kLw" label="1" max="1" min="1"/>
+      <type xmi:id="_uRrbBmNhEeS1krHrX10kLw" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_uRrbB2NhEeS1krHrX10kLw" name="probOutlier">
+      <modelElement href="Outlier%20Detection.uml#_uKq0EGNhEeS1krHrX10kLw"/>
+      <visibility xmi:id="_uRrbCGNhEeS1krHrX10kLw" label="+"/>
+      <outParameters xmi:id="_uRrbCWNhEeS1krHrX10kLw">
+        <modelElement href="Outlier%20Detection.uml#_uKq0EWNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uRrbCmNhEeS1krHrX10kLw" name="double">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_uRrbC2NhEeS1krHrX10kLw" name="deleteFirst">
+      <modelElement href="Outlier%20Detection.uml#_uKrbIWNhEeS1krHrX10kLw"/>
+      <visibility xmi:id="_uRrbDGNhEeS1krHrX10kLw" label="+"/>
+    </operations>
+    <operations xmi:id="_uRrbDWNhEeS1krHrX10kLw" name="calculate">
+      <modelElement href="Outlier%20Detection.uml#_uNEn0GNhEeS1krHrX10kLw"/>
+      <visibility xmi:id="_uRrbDmNhEeS1krHrX10kLw" label="+"/>
+      <parameters xmi:id="_uRrbD2NhEeS1krHrX10kLw" name="data">
+        <modelElement href="Outlier%20Detection.uml#_uNEn0WNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uRrbEGNhEeS1krHrX10kLw" name="Deque">
+          <modelElement href="Outlier%20Detection.uml#_uMpKAGNhEeS1krHrX10kLw"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_uRkGQ2NhEeS1krHrX10kLw" name="Density" associationsOut="_uRemsWNhEeS1krHrX10kLw" generalizations="_uRemsGNhEeS1krHrX10kLw">
+    <modelElement href="Outlier%20Detection.uml#_uKsCMGNhEeS1krHrX10kLw"/>
+    <visualProperties xmi:id="_uRkGRGNhEeS1krHrX10kLw" position="-738.0,101.0" size="173.0,228.0"/>
+    <visibility xmi:id="_uRkGRWNhEeS1krHrX10kLw" label="+"/>
+    <attributes xmi:id="_uRkGRmNhEeS1krHrX10kLw" name="densities">
+      <modelElement href="Outlier%20Detection.uml#_uNcbQGNhEeS1krHrX10kLw"/>
+      <stereotypes xmi:id="_uRkGR2NhEeS1krHrX10kLw" name="Generics">
+        <modelElement href="Outlier%20Detection.uml#_uNdCUGNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <stereotypes xmi:id="_uRkGSGNhEeS1krHrX10kLw" name="LegacyStyledElement">
+        <modelElement href="Outlier%20Detection.uml#_uNdpYGNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <stereotypes xmi:id="_uRkGQWNhEeS1krHrX10kLw" name="Generics">
+        <modelElement href="Outlier%20Detection.uml#_uNdCUGNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <stereotypes xmi:id="_uRkGQmNhEeS1krHrX10kLw" name="LegacyStyledElement">
+        <modelElement href="Outlier%20Detection.uml#_uNdpYGNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <visibility xmi:id="_uRkGSWNhEeS1krHrX10kLw" label="+"/>
+      <cardinality xmi:id="_uRkGSmNhEeS1krHrX10kLw" label="1" max="1" min="1"/>
+      <type xmi:id="_uRkGS2NhEeS1krHrX10kLw" name="Deque">
+        <modelElement href="Outlier%20Detection.uml#_uMpKAGNhEeS1krHrX10kLw"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_uRkGTGNhEeS1krHrX10kLw" name="max">
+      <modelElement href="Outlier%20Detection.uml#_uNdpYWNhEeS1krHrX10kLw"/>
+      <stereotypes xmi:id="_uRkGTWNhEeS1krHrX10kLw" name="LegacyStyledElement">
+        <modelElement href="Outlier%20Detection.uml#_uNdpYmNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <visibility xmi:id="_uRkGTmNhEeS1krHrX10kLw" label="+"/>
+      <cardinality xmi:id="_uRkGT2NhEeS1krHrX10kLw" label="1" max="1" min="1"/>
+      <type xmi:id="_uRkGUGNhEeS1krHrX10kLw" name="double">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_uRkGUWNhEeS1krHrX10kLw" name="lof">
+      <modelElement href="Outlier%20Detection.uml#_uNdpY2NhEeS1krHrX10kLw"/>
+      <stereotypes xmi:id="_uRkGUmNhEeS1krHrX10kLw" name="LegacyStyledElement">
+        <modelElement href="Outlier%20Detection.uml#_uNeQcGNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <visibility xmi:id="_uRkGU2NhEeS1krHrX10kLw" label="+"/>
+      <cardinality xmi:id="_uRkGVGNhEeS1krHrX10kLw" label="1" max="1" min="1"/>
+      <type xmi:id="_uRkGVWNhEeS1krHrX10kLw" name="double">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_uRkGVmNhEeS1krHrX10kLw" name="Density">
+      <modelElement href="Outlier%20Detection.uml#_uKtQUGNhEeS1krHrX10kLw"/>
+      <keywords xmi:id="_uRkGV2NhEeS1krHrX10kLw" keyword="create"/>
+      <visibility xmi:id="_uRkGWGNhEeS1krHrX10kLw" label="+"/>
+      <outParameters xmi:id="_uRkGWWNhEeS1krHrX10kLw">
+        <modelElement href="Outlier%20Detection.uml#_uKtQU2NhEeS1krHrX10kLw"/>
+        <type xmi:id="_uRkGWmNhEeS1krHrX10kLw" name="Density">
+          <modelElement href="Outlier%20Detection.uml#_uKsCMGNhEeS1krHrX10kLw"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_uRkGW2NhEeS1krHrX10kLw" name="getDensities">
+      <modelElement href="Outlier%20Detection.uml#_uKtQVGNhEeS1krHrX10kLw"/>
+      <stereotypes xmi:id="_uRkGXGNhEeS1krHrX10kLw" name="Generics">
+        <modelElement href="Outlier%20Detection.uml#_uKt3YGNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <visibility xmi:id="_uRkGXWNhEeS1krHrX10kLw" label="+"/>
+      <outParameters xmi:id="_uRkGXmNhEeS1krHrX10kLw">
+        <modelElement href="Outlier%20Detection.uml#_uNFO4GNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uRkGX2NhEeS1krHrX10kLw" name="Deque">
+          <modelElement href="Outlier%20Detection.uml#_uMpKAGNhEeS1krHrX10kLw"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_uRkGbGNhEeS1krHrX10kLw" name="distance">
+      <modelElement href="Outlier%20Detection.uml#_uKwToGNhEeS1krHrX10kLw"/>
+      <visibility xmi:id="_uRkGbWNhEeS1krHrX10kLw" label="+"/>
+      <outParameters xmi:id="_uRkGbmNhEeS1krHrX10kLw">
+        <modelElement href="Outlier%20Detection.uml#_uKwTo2NhEeS1krHrX10kLw"/>
+        <type xmi:id="_uRkGb2NhEeS1krHrX10kLw" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_uRkGcGNhEeS1krHrX10kLw" name="reference">
+        <modelElement href="Outlier%20Detection.uml#_uKwToWNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uRkGcWNhEeS1krHrX10kLw" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_uRkGcmNhEeS1krHrX10kLw" name="val">
+        <modelElement href="Outlier%20Detection.uml#_uKwTomNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uRkGc2NhEeS1krHrX10kLw" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_uRktYGNhEeS1krHrX10kLw" comments="_uRgb4GNhEeS1krHrX10kLw" targetConnectionVisual="_uRgb4WNhEeS1krHrX10kLw" name="calculate">
+      <modelElement href="Outlier%20Detection.uml#_uNGdAGNhEeS1krHrX10kLw"/>
+      <visibility xmi:id="_uRktYWNhEeS1krHrX10kLw" label="+"/>
+      <parameters xmi:id="_uRktYmNhEeS1krHrX10kLw" name="data">
+        <modelElement href="Outlier%20Detection.uml#_uNGdAWNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uRktY2NhEeS1krHrX10kLw" name="Deque">
+          <modelElement href="Outlier%20Detection.uml#_uMpKAGNhEeS1krHrX10kLw"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_uRktZGNhEeS1krHrX10kLw" name="reachKDistance">
+      <modelElement href="Outlier%20Detection.uml#_uNHEEWNhEeS1krHrX10kLw"/>
+      <visibility xmi:id="_uRktZWNhEeS1krHrX10kLw" label="+"/>
+      <outParameters xmi:id="_uRktZmNhEeS1krHrX10kLw">
+        <modelElement href="Outlier%20Detection.uml#_uNHrI2NhEeS1krHrX10kLw"/>
+        <type xmi:id="_uRktZ2NhEeS1krHrX10kLw" name="double">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_uRktaGNhEeS1krHrX10kLw" name="k">
+        <modelElement href="Outlier%20Detection.uml#_uNHEEmNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uRktaWNhEeS1krHrX10kLw" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_uRktamNhEeS1krHrX10kLw" name="o">
+        <modelElement href="Outlier%20Detection.uml#_uNHrIGNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uRkta2NhEeS1krHrX10kLw" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_uRktbGNhEeS1krHrX10kLw" name="p">
+        <modelElement href="Outlier%20Detection.uml#_uNHrIWNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uRktbWNhEeS1krHrX10kLw" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_uRktbmNhEeS1krHrX10kLw" name="list">
+        <modelElement href="Outlier%20Detection.uml#_uNHrImNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uRktb2NhEeS1krHrX10kLw" name="CopyOnWriteArrayList">
+          <modelElement href="Outlier%20Detection.uml#_uMsNU2NhEeS1krHrX10kLw"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_uRktcGNhEeS1krHrX10kLw" name="lrd">
+      <modelElement href="Outlier%20Detection.uml#_uNISMWNhEeS1krHrX10kLw"/>
+      <visibility xmi:id="_uRktcWNhEeS1krHrX10kLw" label="+"/>
+      <outParameters xmi:id="_uRktcmNhEeS1krHrX10kLw">
+        <modelElement href="Outlier%20Detection.uml#_uNI5QGNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uRktc2NhEeS1krHrX10kLw" name="double">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_uRktdGNhEeS1krHrX10kLw" name="list">
+        <modelElement href="Outlier%20Detection.uml#_uNISMmNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uRktdWNhEeS1krHrX10kLw" name="CopyOnWriteArrayList">
+          <modelElement href="Outlier%20Detection.uml#_uMsNU2NhEeS1krHrX10kLw"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_uRktdmNhEeS1krHrX10kLw" name="k">
+        <modelElement href="Outlier%20Detection.uml#_uNISM2NhEeS1krHrX10kLw"/>
+        <type xmi:id="_uRktd2NhEeS1krHrX10kLw" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_uRkteGNhEeS1krHrX10kLw" name="p">
+        <modelElement href="Outlier%20Detection.uml#_uNISNGNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uRkteWNhEeS1krHrX10kLw" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_uRktemNhEeS1krHrX10kLw" name="knn">
+      <modelElement href="Outlier%20Detection.uml#_uNJgUGNhEeS1krHrX10kLw"/>
+      <stereotypes xmi:id="_uRkte2NhEeS1krHrX10kLw" name="Array">
+        <modelElement href="Outlier%20Detection.uml#_uNJgVWNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <visibility xmi:id="_uRktfGNhEeS1krHrX10kLw" label="+"/>
+      <outParameters xmi:id="_uRktfWNhEeS1krHrX10kLw">
+        <modelElement href="Outlier%20Detection.uml#_uNJgU2NhEeS1krHrX10kLw"/>
+        <type xmi:id="_uRktfmNhEeS1krHrX10kLw" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_uRktf2NhEeS1krHrX10kLw" name="data">
+        <modelElement href="Outlier%20Detection.uml#_uNJgUWNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uRktgGNhEeS1krHrX10kLw" name="List">
+          <modelElement href="Outlier%20Detection.uml#_uMsNUWNhEeS1krHrX10kLw"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_uRktgWNhEeS1krHrX10kLw" name="k">
+        <modelElement href="Outlier%20Detection.uml#_uNJgUmNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uRktgmNhEeS1krHrX10kLw" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_uRZHIGNhEeS1krHrX10kLw" comments="_uRWD0WNhEeS1krHrX10kLw" targetConnectionVisual="_uRWD0mNhEeS1krHrX10kLw" name="Hull" generalizations="_uRWD0GNhEeS1krHrX10kLw">
+    <modelElement href="Outlier%20Detection.uml#_uK9vAGNhEeS1krHrX10kLw"/>
+    <visualProperties xmi:id="_uRZHIWNhEeS1krHrX10kLw" position="-560.0,100.0" size="165.0,212.0"/>
+    <visibility xmi:id="_uRZHImNhEeS1krHrX10kLw" label="+"/>
+    <attributes xmi:id="_uRZHI2NhEeS1krHrX10kLw" name="hulls">
+      <modelElement href="Outlier%20Detection.uml#_uNfekWNhEeS1krHrX10kLw"/>
+      <stereotypes xmi:id="_uRZHJGNhEeS1krHrX10kLw" name="LegacyStyledElement">
+        <modelElement href="Outlier%20Detection.uml#_uNgFoGNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <visibility xmi:id="_uRZHJWNhEeS1krHrX10kLw" label="+"/>
+      <cardinality xmi:id="_uRZHJmNhEeS1krHrX10kLw" label="1..*" max="-1" min="1"/>
+      <type xmi:id="_uRZHJ2NhEeS1krHrX10kLw" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_uRZHKGNhEeS1krHrX10kLw" name="value">
+      <modelElement href="Outlier%20Detection.uml#_uNgFoWNhEeS1krHrX10kLw"/>
+      <stereotypes xmi:id="_uRZHKWNhEeS1krHrX10kLw" name="LegacyStyledElement">
+        <modelElement href="Outlier%20Detection.uml#_uNgFomNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <visibility xmi:id="_uRZHKmNhEeS1krHrX10kLw" label="+"/>
+      <cardinality xmi:id="_uRZHK2NhEeS1krHrX10kLw" label="1" max="1" min="1"/>
+      <type xmi:id="_uRZHLGNhEeS1krHrX10kLw" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_uRZHLWNhEeS1krHrX10kLw" name="sigma">
+      <modelElement href="Outlier%20Detection.uml#_uNgFo2NhEeS1krHrX10kLw"/>
+      <stereotypes xmi:id="_uRZHLmNhEeS1krHrX10kLw" name="LegacyStyledElement">
+        <modelElement href="Outlier%20Detection.uml#_uNgssGNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <visibility xmi:id="_uRZHL2NhEeS1krHrX10kLw" label="+"/>
+      <cardinality xmi:id="_uRZHMGNhEeS1krHrX10kLw" label="1" max="1" min="1"/>
+      <type xmi:id="_uRZHMWNhEeS1krHrX10kLw" name="double">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_uRZHMmNhEeS1krHrX10kLw" comments="_uRWq4GNhEeS1krHrX10kLw" targetConnectionVisual="_uRWq4WNhEeS1krHrX10kLw" name="Hull">
+      <modelElement href="Outlier%20Detection.uml#_uK-9IGNhEeS1krHrX10kLw"/>
+      <keywords xmi:id="_uRZHM2NhEeS1krHrX10kLw" keyword="create"/>
+      <visibility xmi:id="_uRZHNGNhEeS1krHrX10kLw" label="+"/>
+      <outParameters xmi:id="_uRZHNWNhEeS1krHrX10kLw">
+        <modelElement href="Outlier%20Detection.uml#_uK-9I2NhEeS1krHrX10kLw"/>
+        <type xmi:id="_uRZHNmNhEeS1krHrX10kLw" name="Hull">
+          <modelElement href="Outlier%20Detection.uml#_uK9vAGNhEeS1krHrX10kLw"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_uRZHN2NhEeS1krHrX10kLw" comments="_uRWq4mNhEeS1krHrX10kLw" targetConnectionVisual="_uRXR8GNhEeS1krHrX10kLw" name="getHulls">
+      <modelElement href="Outlier%20Detection.uml#_uK_kMGNhEeS1krHrX10kLw"/>
+      <visibility xmi:id="_uRZHOGNhEeS1krHrX10kLw" label="+"/>
+      <outParameters xmi:id="_uRZHOWNhEeS1krHrX10kLw">
+        <modelElement href="Outlier%20Detection.uml#_uK_kMWNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uRZHOmNhEeS1krHrX10kLw" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_uRZHO2NhEeS1krHrX10kLw" name="getSize">
+      <modelElement href="Outlier%20Detection.uml#_uK_kM2NhEeS1krHrX10kLw"/>
+      <stereotypes xmi:id="_uRZHPGNhEeS1krHrX10kLw" name="LegacyStyledElement">
+        <modelElement href="Outlier%20Detection.uml#_uLALQWNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <stereotypes xmi:id="_uRZHPWNhEeS1krHrX10kLw" name="Annotations">
+        <modelElement href="Outlier%20Detection.uml#_uLALQmNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <visibility xmi:id="_uRZHPmNhEeS1krHrX10kLw" label="+"/>
+      <outParameters xmi:id="_uRZHP2NhEeS1krHrX10kLw">
+        <modelElement href="Outlier%20Detection.uml#_uLALQGNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uRZHQGNhEeS1krHrX10kLw" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_uRZHQWNhEeS1krHrX10kLw" name="deleteFirst">
+      <modelElement href="Outlier%20Detection.uml#_uLALRGNhEeS1krHrX10kLw"/>
+      <stereotypes xmi:id="_uRZHQmNhEeS1krHrX10kLw" name="LegacyStyledElement">
+        <modelElement href="Outlier%20Detection.uml#_uLAyUGNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <stereotypes xmi:id="_uRZHQ2NhEeS1krHrX10kLw" name="Annotations">
+        <modelElement href="Outlier%20Detection.uml#_uLAyUWNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <visibility xmi:id="_uRZHRGNhEeS1krHrX10kLw" label="+"/>
+    </operations>
+    <operations xmi:id="_uRZHRWNhEeS1krHrX10kLw" name="probOutlier">
+      <modelElement href="Outlier%20Detection.uml#_uLAyU2NhEeS1krHrX10kLw"/>
+      <stereotypes xmi:id="_uRZHRmNhEeS1krHrX10kLw" name="LegacyStyledElement">
+        <modelElement href="Outlier%20Detection.uml#_uLBZYWNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <stereotypes xmi:id="_uRZHR2NhEeS1krHrX10kLw" name="Annotations">
+        <modelElement href="Outlier%20Detection.uml#_uLBZYmNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <visibility xmi:id="_uRZHSGNhEeS1krHrX10kLw" label="+"/>
+      <outParameters xmi:id="_uRZHSWNhEeS1krHrX10kLw">
+        <modelElement href="Outlier%20Detection.uml#_uLBZYGNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uRZHSmNhEeS1krHrX10kLw" name="double">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_uRZHUWNhEeS1krHrX10kLw" name="calculate">
+      <modelElement href="Outlier%20Detection.uml#_uNNKsGNhEeS1krHrX10kLw"/>
+      <stereotypes xmi:id="_uRZHUmNhEeS1krHrX10kLw" name="LegacyStyledElement">
+        <modelElement href="Outlier%20Detection.uml#_uNNKsmNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <stereotypes xmi:id="_uRZHU2NhEeS1krHrX10kLw" name="Annotations">
+        <modelElement href="Outlier%20Detection.uml#_uNNxwWNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <visibility xmi:id="_uRZHVGNhEeS1krHrX10kLw" label="+"/>
+      <parameters xmi:id="_uRZHVWNhEeS1krHrX10kLw" name="data">
+        <modelElement href="Outlier%20Detection.uml#_uNNKsWNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uRZHVmNhEeS1krHrX10kLw" name="Deque">
+          <modelElement href="Outlier%20Detection.uml#_uMpKAGNhEeS1krHrX10kLw"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_uRLEsGNhEeS1krHrX10kLw" comments="_uRGzQWNhEeS1krHrX10kLw" targetConnectionVisual="_uRGzQmNhEeS1krHrX10kLw" name="Knn" generalizations="_uRGzQGNhEeS1krHrX10kLw">
+    <modelElement href="Outlier%20Detection.uml#_uLEcsGNhEeS1krHrX10kLw"/>
+    <visualProperties xmi:id="_uRLEsWNhEeS1krHrX10kLw" position="-384.0,101.0" size="165.0,208.0"/>
+    <visibility xmi:id="_uRLEsmNhEeS1krHrX10kLw" label="+"/>
+    <attributes xmi:id="_uRLEs2NhEeS1krHrX10kLw" name="distances">
+      <modelElement href="Outlier%20Detection.uml#_uNgssWNhEeS1krHrX10kLw"/>
+      <stereotypes xmi:id="_uRLEtGNhEeS1krHrX10kLw" name="LegacyStyledElement">
+        <modelElement href="Outlier%20Detection.uml#_uNgss2NhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <visibility xmi:id="_uRLEtWNhEeS1krHrX10kLw" label="+"/>
+      <cardinality xmi:id="_uRLEtmNhEeS1krHrX10kLw" label="1..*" max="-1" min="1"/>
+      <type xmi:id="_uRLEt2NhEeS1krHrX10kLw" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_uRLEuGNhEeS1krHrX10kLw" name="value">
+      <modelElement href="Outlier%20Detection.uml#_uNhTwGNhEeS1krHrX10kLw"/>
+      <stereotypes xmi:id="_uRLEuWNhEeS1krHrX10kLw" name="LegacyStyledElement">
+        <modelElement href="Outlier%20Detection.uml#_uNhTwWNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <visibility xmi:id="_uRLEumNhEeS1krHrX10kLw" label="+"/>
+      <cardinality xmi:id="_uRLEu2NhEeS1krHrX10kLw" label="1" max="1" min="1"/>
+      <type xmi:id="_uRLEvGNhEeS1krHrX10kLw" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_uRLEvWNhEeS1krHrX10kLw" comments="_uRHaUGNhEeS1krHrX10kLw" targetConnectionVisual="_uRHaUWNhEeS1krHrX10kLw" name="Knn">
+      <modelElement href="Outlier%20Detection.uml#_uLFDwGNhEeS1krHrX10kLw"/>
+      <keywords xmi:id="_uRLEvmNhEeS1krHrX10kLw" keyword="create"/>
+      <visibility xmi:id="_uRLEv2NhEeS1krHrX10kLw" label="+"/>
+      <outParameters xmi:id="_uRLEwGNhEeS1krHrX10kLw">
+        <modelElement href="Outlier%20Detection.uml#_uLFDw2NhEeS1krHrX10kLw"/>
+        <type xmi:id="_uRLEwWNhEeS1krHrX10kLw" name="Knn">
+          <modelElement href="Outlier%20Detection.uml#_uLEcsGNhEeS1krHrX10kLw"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_uRLEwmNhEeS1krHrX10kLw" comments="_uRHaUmNhEeS1krHrX10kLw" targetConnectionVisual="_uRHaU2NhEeS1krHrX10kLw" name="getDistances">
+      <modelElement href="Outlier%20Detection.uml#_uLFq0GNhEeS1krHrX10kLw"/>
+      <visibility xmi:id="_uRLEw2NhEeS1krHrX10kLw" label="+"/>
+      <outParameters xmi:id="_uRLExGNhEeS1krHrX10kLw">
+        <modelElement href="Outlier%20Detection.uml#_uLFq0WNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uRLExWNhEeS1krHrX10kLw" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_uRLExmNhEeS1krHrX10kLw" name="getSize">
+      <modelElement href="Outlier%20Detection.uml#_uLGR4GNhEeS1krHrX10kLw"/>
+      <visibility xmi:id="_uRLEx2NhEeS1krHrX10kLw" label="+"/>
+      <outParameters xmi:id="_uRLEyGNhEeS1krHrX10kLw">
+        <modelElement href="Outlier%20Detection.uml#_uLGR4WNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uRLEyWNhEeS1krHrX10kLw" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_uRLEymNhEeS1krHrX10kLw" comments="_uRIBYGNhEeS1krHrX10kLw" targetConnectionVisual="_uRIBYWNhEeS1krHrX10kLw" name="distance">
+      <modelElement href="Outlier%20Detection.uml#_uLG48GNhEeS1krHrX10kLw"/>
+      <visibility xmi:id="_uRLEy2NhEeS1krHrX10kLw" label="+"/>
+      <outParameters xmi:id="_uRLEzGNhEeS1krHrX10kLw">
+        <modelElement href="Outlier%20Detection.uml#_uLG482NhEeS1krHrX10kLw"/>
+        <type xmi:id="_uRLEzWNhEeS1krHrX10kLw" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_uRLEzmNhEeS1krHrX10kLw" name="reference">
+        <modelElement href="Outlier%20Detection.uml#_uLG48WNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uRLEz2NhEeS1krHrX10kLw" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_uRLE0GNhEeS1krHrX10kLw" name="val">
+        <modelElement href="Outlier%20Detection.uml#_uLG48mNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uRLE0WNhEeS1krHrX10kLw" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_uRLE5GNhEeS1krHrX10kLw" comments="_uRJPgmNhEeS1krHrX10kLw" targetConnectionVisual="_uRJPg2NhEeS1krHrX10kLw" name="calculate">
+      <modelElement href="Outlier%20Detection.uml#_uNO_4WNhEeS1krHrX10kLw"/>
+      <visibility xmi:id="_uRLE5WNhEeS1krHrX10kLw" label="+"/>
+      <parameters xmi:id="_uRLE5mNhEeS1krHrX10kLw" name="data">
+        <modelElement href="Outlier%20Detection.uml#_uNO_4mNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uRLE52NhEeS1krHrX10kLw" name="Deque">
+          <modelElement href="Outlier%20Detection.uml#_uMpKAGNhEeS1krHrX10kLw"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_uRLE6GNhEeS1krHrX10kLw" comments="_uRJ2kGNhEeS1krHrX10kLw" targetConnectionVisual="_uRJ2kWNhEeS1krHrX10kLw" name="knn">
+      <modelElement href="Outlier%20Detection.uml#_uNPm8WNhEeS1krHrX10kLw"/>
+      <stereotypes xmi:id="_uRLE6WNhEeS1krHrX10kLw" name="Array">
+        <modelElement href="Outlier%20Detection.uml#_uNQOA2NhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <visibility xmi:id="_uRLE6mNhEeS1krHrX10kLw" label="+"/>
+      <outParameters xmi:id="_uRLE62NhEeS1krHrX10kLw">
+        <modelElement href="Outlier%20Detection.uml#_uNQOAWNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uRLE7GNhEeS1krHrX10kLw" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_uRLE7WNhEeS1krHrX10kLw" name="data">
+        <modelElement href="Outlier%20Detection.uml#_uNPm8mNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uRLE7mNhEeS1krHrX10kLw" name="List">
+          <modelElement href="Outlier%20Detection.uml#_uMsNUWNhEeS1krHrX10kLw"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_uRLE72NhEeS1krHrX10kLw" name="k">
+        <modelElement href="Outlier%20Detection.uml#_uNQOAGNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uRLE8GNhEeS1krHrX10kLw" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_uRCh0GNhEeS1krHrX10kLw" name="Statistic" generalizations="_uQ-3cGNhEeS1krHrX10kLw">
+    <modelElement href="Outlier%20Detection.uml#_uLLxcGNhEeS1krHrX10kLw"/>
+    <visualProperties xmi:id="_uRCh0WNhEeS1krHrX10kLw" position="-207.0,101.0" size="151.0,204.0"/>
+    <visibility xmi:id="_uRCh0mNhEeS1krHrX10kLw" label="+"/>
+    <attributes xmi:id="_uRCh02NhEeS1krHrX10kLw" name="probOutlier">
+      <modelElement href="Outlier%20Detection.uml#_uNhTwmNhEeS1krHrX10kLw"/>
+      <stereotypes xmi:id="_uRCh1GNhEeS1krHrX10kLw" name="LegacyStyledElement">
+        <modelElement href="Outlier%20Detection.uml#_uNh60GNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <visibility xmi:id="_uRCh1WNhEeS1krHrX10kLw" label="~"/>
+      <cardinality xmi:id="_uRCh1mNhEeS1krHrX10kLw" label="1" max="1" min="1"/>
+      <type xmi:id="_uRCh12NhEeS1krHrX10kLw" name="double">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_uRCh2GNhEeS1krHrX10kLw" name="mean">
+      <modelElement href="Outlier%20Detection.uml#_uNh60WNhEeS1krHrX10kLw"/>
+      <stereotypes xmi:id="_uRCh2WNhEeS1krHrX10kLw" name="LegacyStyledElement">
+        <modelElement href="Outlier%20Detection.uml#_uNh60mNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <visibility xmi:id="_uRCh2mNhEeS1krHrX10kLw" label="~"/>
+      <cardinality xmi:id="_uRCh22NhEeS1krHrX10kLw" label="1" max="1" min="1"/>
+      <type xmi:id="_uRCh3GNhEeS1krHrX10kLw" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_uRCh3WNhEeS1krHrX10kLw" name="sigma">
+      <modelElement href="Outlier%20Detection.uml#_uNh602NhEeS1krHrX10kLw"/>
+      <stereotypes xmi:id="_uRCh3mNhEeS1krHrX10kLw" name="LegacyStyledElement">
+        <modelElement href="Outlier%20Detection.uml#_uNih4GNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <visibility xmi:id="_uRCh32NhEeS1krHrX10kLw" label="~"/>
+      <cardinality xmi:id="_uRCh4GNhEeS1krHrX10kLw" label="1" max="1" min="1"/>
+      <type xmi:id="_uRCh4WNhEeS1krHrX10kLw" name="double">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_uRCh4mNhEeS1krHrX10kLw" name="Statistic">
+      <modelElement href="Outlier%20Detection.uml#_uLMYgGNhEeS1krHrX10kLw"/>
+      <keywords xmi:id="_uRCh42NhEeS1krHrX10kLw" keyword="create"/>
+      <visibility xmi:id="_uRCh5GNhEeS1krHrX10kLw" label="+"/>
+      <outParameters xmi:id="_uRCh5WNhEeS1krHrX10kLw">
+        <modelElement href="Outlier%20Detection.uml#_uLM_kWNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uRCh5mNhEeS1krHrX10kLw" name="Statistic">
+          <modelElement href="Outlier%20Detection.uml#_uLLxcGNhEeS1krHrX10kLw"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_uRCh52NhEeS1krHrX10kLw" name="probOutlier">
+      <modelElement href="Outlier%20Detection.uml#_uLM_kmNhEeS1krHrX10kLw"/>
+      <stereotypes xmi:id="_uRCh6GNhEeS1krHrX10kLw" name="LegacyStyledElement">
+        <modelElement href="Outlier%20Detection.uml#_uLNmoGNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <stereotypes xmi:id="_uRCh6WNhEeS1krHrX10kLw" name="Annotations">
+        <modelElement href="Outlier%20Detection.uml#_uLNmoWNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <visibility xmi:id="_uRCh6mNhEeS1krHrX10kLw" label="+"/>
+      <outParameters xmi:id="_uRCh62NhEeS1krHrX10kLw">
+        <modelElement href="Outlier%20Detection.uml#_uLM_k2NhEeS1krHrX10kLw"/>
+        <type xmi:id="_uRCh7GNhEeS1krHrX10kLw" name="double">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_uRCh7WNhEeS1krHrX10kLw" name="getSize">
+      <modelElement href="Outlier%20Detection.uml#_uLNmo2NhEeS1krHrX10kLw"/>
+      <stereotypes xmi:id="_uRCh7mNhEeS1krHrX10kLw" name="LegacyStyledElement">
+        <modelElement href="Outlier%20Detection.uml#_uLONsWNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <stereotypes xmi:id="_uRCh72NhEeS1krHrX10kLw" name="Annotations">
+        <modelElement href="Outlier%20Detection.uml#_uLONsmNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <visibility xmi:id="_uRCh8GNhEeS1krHrX10kLw" label="+"/>
+      <outParameters xmi:id="_uRCh8WNhEeS1krHrX10kLw">
+        <modelElement href="Outlier%20Detection.uml#_uLONsGNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uRCh8mNhEeS1krHrX10kLw" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_uRCh82NhEeS1krHrX10kLw" name="deleteFirst">
+      <modelElement href="Outlier%20Detection.uml#_uLONtGNhEeS1krHrX10kLw"/>
+      <stereotypes xmi:id="_uRCh9GNhEeS1krHrX10kLw" name="LegacyStyledElement">
+        <modelElement href="Outlier%20Detection.uml#_uLO0wGNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <stereotypes xmi:id="_uRCh9WNhEeS1krHrX10kLw" name="Annotations">
+        <modelElement href="Outlier%20Detection.uml#_uLO0wWNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <visibility xmi:id="_uRCh9mNhEeS1krHrX10kLw" label="+"/>
+    </operations>
+    <operations xmi:id="_uRCh_WNhEeS1krHrX10kLw" name="calculate">
+      <modelElement href="Outlier%20Detection.uml#_uNRcIGNhEeS1krHrX10kLw"/>
+      <stereotypes xmi:id="_uRCh_mNhEeS1krHrX10kLw" name="LegacyStyledElement">
+        <modelElement href="Outlier%20Detection.uml#_uNSDMGNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <stereotypes xmi:id="_uRCh_2NhEeS1krHrX10kLw" name="Annotations">
+        <modelElement href="Outlier%20Detection.uml#_uNSqQWNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <visibility xmi:id="_uRCiAGNhEeS1krHrX10kLw" label="+"/>
+      <parameters xmi:id="_uRCiAWNhEeS1krHrX10kLw" name="data">
+        <modelElement href="Outlier%20Detection.uml#_uNRcIWNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uRCiAmNhEeS1krHrX10kLw" name="Deque">
+          <modelElement href="Outlier%20Detection.uml#_uMpKAGNhEeS1krHrX10kLw"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_uQgWUGNhEeS1krHrX10kLw" comments="_uQfIMGNhEeS1krHrX10kLw" targetConnectionVisual="_uQfIMWNhEeS1krHrX10kLw" name="FileManager" associationsIn="_uQWlUGNhEeS1krHrX10kLw">
+    <modelElement href="Outlier%20Detection.uml#_uLRRAGNhEeS1krHrX10kLw"/>
+    <visualProperties xmi:id="_uQgWUWNhEeS1krHrX10kLw" position="35.0,206.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_uQgWUmNhEeS1krHrX10kLw" label="+"/>
+    <operations xmi:id="_uQgWU2NhEeS1krHrX10kLw" name="listDirectories">
+      <modelElement href="Outlier%20Detection.uml#_uLR4EGNhEeS1krHrX10kLw"/>
+      <visibility xmi:id="_uQgWVGNhEeS1krHrX10kLw" label="+"/>
+      <outParameters xmi:id="_uQgWVWNhEeS1krHrX10kLw">
+        <modelElement href="Outlier%20Detection.uml#_uLR4EmNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uQgWVmNhEeS1krHrX10kLw" name="File">
+          <modelElement href="Outlier%20Detection.uml#_uM0wMmNhEeS1krHrX10kLw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_uQgWV2NhEeS1krHrX10kLw" name="sourceDirectory">
+        <modelElement href="Outlier%20Detection.uml#_uLR4EWNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uQgWWGNhEeS1krHrX10kLw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_uQgWWWNhEeS1krHrX10kLw" name="parse">
+      <modelElement href="Outlier%20Detection.uml#_uNTRUGNhEeS1krHrX10kLw"/>
+      <visibility xmi:id="_uQgWWmNhEeS1krHrX10kLw" label="+"/>
+      <parameters xmi:id="_uQgWW2NhEeS1krHrX10kLw" name="file">
+        <modelElement href="Outlier%20Detection.uml#_uNTRUWNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uQgWXGNhEeS1krHrX10kLw" name="File">
+          <modelElement href="Outlier%20Detection.uml#_uM0wMmNhEeS1krHrX10kLw"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_uQgWXWNhEeS1krHrX10kLw" name="info">
+        <modelElement href="Outlier%20Detection.uml#_uNTRUmNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uQgWXmNhEeS1krHrX10kLw" name="HashMap">
+          <modelElement href="Outlier%20Detection.uml#_uM3zgGNhEeS1krHrX10kLw"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_uQgWX2NhEeS1krHrX10kLw" name="copyFile">
+      <modelElement href="Outlier%20Detection.uml#_uNUfcGNhEeS1krHrX10kLw"/>
+      <visibility xmi:id="_uQgWYGNhEeS1krHrX10kLw" label="+"/>
+      <parameters xmi:id="_uQgWYWNhEeS1krHrX10kLw" name="sourceFile">
+        <modelElement href="Outlier%20Detection.uml#_uNUfcWNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uQgWYmNhEeS1krHrX10kLw" name="File">
+          <modelElement href="Outlier%20Detection.uml#_uM0wMmNhEeS1krHrX10kLw"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_uQgWY2NhEeS1krHrX10kLw" name="destFile">
+        <modelElement href="Outlier%20Detection.uml#_uNUfcmNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uQgWZGNhEeS1krHrX10kLw" name="File">
+          <modelElement href="Outlier%20Detection.uml#_uM0wMmNhEeS1krHrX10kLw"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_uQ7NEGNhEeS1krHrX10kLw" comments="_uQ27oGNhEeS1krHrX10kLw" targetConnectionVisual="_uQ27oWNhEeS1krHrX10kLw" name="DescriptiveStats" associationsOut="_uQ6mAGNhEeS1krHrX10kLw">
+    <modelElement href="Outlier%20Detection.uml#_uK42gGNhEeS1krHrX10kLw"/>
+    <visualProperties xmi:id="_uQ7NEWNhEeS1krHrX10kLw" position="-247.0,-253.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_uQ7NEmNhEeS1krHrX10kLw" label="+"/>
+    <attributes xmi:id="_uQ7NE2NhEeS1krHrX10kLw" name="values">
+      <modelElement href="Outlier%20Detection.uml#_uNeQcWNhEeS1krHrX10kLw"/>
+      <stereotypes xmi:id="_uQ7NFGNhEeS1krHrX10kLw" name="Generics">
+        <modelElement href="Outlier%20Detection.uml#_uNe3gGNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <stereotypes xmi:id="_uQ7NFWNhEeS1krHrX10kLw" name="LegacyStyledElement">
+        <modelElement href="Outlier%20Detection.uml#_uNfekGNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <stereotypes xmi:id="_uQ7NFmNhEeS1krHrX10kLw" name="Generics">
+        <modelElement href="Outlier%20Detection.uml#_uNe3gGNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <stereotypes xmi:id="_uQ7NF2NhEeS1krHrX10kLw" name="LegacyStyledElement">
+        <modelElement href="Outlier%20Detection.uml#_uNfekGNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <visibility xmi:id="_uQ7NGGNhEeS1krHrX10kLw" label="~"/>
+      <cardinality xmi:id="_uQ7NGWNhEeS1krHrX10kLw" label="1" max="1" min="1"/>
+      <type xmi:id="_uQ7NGmNhEeS1krHrX10kLw" name="CopyOnWriteArrayList">
+        <modelElement href="Outlier%20Detection.uml#_uMsNU2NhEeS1krHrX10kLw"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_uQ7NG2NhEeS1krHrX10kLw" comments="_uQ27omNhEeS1krHrX10kLw" targetConnectionVisual="_uQ3isGNhEeS1krHrX10kLw" name="getvalues">
+      <modelElement href="Outlier%20Detection.uml#_uK5dkGNhEeS1krHrX10kLw"/>
+      <stereotypes xmi:id="_uQ7NHGNhEeS1krHrX10kLw" name="Generics">
+        <modelElement href="Outlier%20Detection.uml#_uK6EoGNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <visibility xmi:id="_uQ7NHWNhEeS1krHrX10kLw" label="+"/>
+      <outParameters xmi:id="_uQ7NHmNhEeS1krHrX10kLw">
+        <modelElement href="Outlier%20Detection.uml#_uNL8kGNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uQ7NH2NhEeS1krHrX10kLw" name="CopyOnWriteArrayList">
+          <modelElement href="Outlier%20Detection.uml#_uMsNU2NhEeS1krHrX10kLw"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_uQ7NIGNhEeS1krHrX10kLw" comments="_uQ3isWNhEeS1krHrX10kLw" targetConnectionVisual="_uQ3ismNhEeS1krHrX10kLw" name="getMin">
+      <modelElement href="Outlier%20Detection.uml#_uK6rsGNhEeS1krHrX10kLw"/>
+      <visibility xmi:id="_uQ7NIWNhEeS1krHrX10kLw" label="+"/>
+      <outParameters xmi:id="_uQ7NImNhEeS1krHrX10kLw">
+        <modelElement href="Outlier%20Detection.uml#_uK6rsWNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uQ7NI2NhEeS1krHrX10kLw" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_uQ7NJGNhEeS1krHrX10kLw" comments="_uQ4JwGNhEeS1krHrX10kLw" targetConnectionVisual="_uQ4JwWNhEeS1krHrX10kLw" name="getMax">
+      <modelElement href="Outlier%20Detection.uml#_uK7SwGNhEeS1krHrX10kLw"/>
+      <visibility xmi:id="_uQ7NJWNhEeS1krHrX10kLw" label="+"/>
+      <outParameters xmi:id="_uQ7NJmNhEeS1krHrX10kLw">
+        <modelElement href="Outlier%20Detection.uml#_uK7SwWNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uQ7NJ2NhEeS1krHrX10kLw" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_uQ7NKGNhEeS1krHrX10kLw" comments="_uQ4JwmNhEeS1krHrX10kLw" targetConnectionVisual="_uQ4Jw2NhEeS1krHrX10kLw" name="getMean">
+      <modelElement href="Outlier%20Detection.uml#_uK7SwmNhEeS1krHrX10kLw"/>
+      <visibility xmi:id="_uQ7NKWNhEeS1krHrX10kLw" label="+"/>
+      <outParameters xmi:id="_uQ7NKmNhEeS1krHrX10kLw">
+        <modelElement href="Outlier%20Detection.uml#_uK7Sw2NhEeS1krHrX10kLw"/>
+        <type xmi:id="_uQ7NK2NhEeS1krHrX10kLw" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_uQ7NLGNhEeS1krHrX10kLw" comments="_uQ4w0GNhEeS1krHrX10kLw" targetConnectionVisual="_uQ4w0WNhEeS1krHrX10kLw" name="getStandardDev">
+      <modelElement href="Outlier%20Detection.uml#_uK750GNhEeS1krHrX10kLw"/>
+      <visibility xmi:id="_uQ7NLWNhEeS1krHrX10kLw" label="+"/>
+      <outParameters xmi:id="_uQ7NLmNhEeS1krHrX10kLw">
+        <modelElement href="Outlier%20Detection.uml#_uK750mNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uQ7NL2NhEeS1krHrX10kLw" name="double">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_uQ7NMGNhEeS1krHrX10kLw" name="mean">
+        <modelElement href="Outlier%20Detection.uml#_uK750WNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uQ7NMWNhEeS1krHrX10kLw" name="double">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_uQWlWWNhEeS1krHrX10kLw" name="ThreadWriter" associationsOut="_uQVXMGNhEeS1krHrX10kLw _uQV-QGNhEeS1krHrX10kLw _uQWlUGNhEeS1krHrX10kLw">
+    <modelElement href="Outlier%20Detection.uml#_uLYlwGNhEeS1krHrX10kLw"/>
+    <visualProperties xmi:id="_uQWlWmNhEeS1krHrX10kLw" position="175.0,46.0" size="195.0,114.0"/>
+    <visibility xmi:id="_uQWlW2NhEeS1krHrX10kLw" label="+"/>
+    <attributes xmi:id="_uQWlXGNhEeS1krHrX10kLw" name="wr">
+      <modelElement href="Outlier%20Detection.uml#_uNjwAWNhEeS1krHrX10kLw"/>
+      <stereotypes xmi:id="_uQWlXWNhEeS1krHrX10kLw" name="LegacyStyledElement">
+        <modelElement href="Outlier%20Detection.uml#_uNjwAmNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <stereotypes xmi:id="_uQWlXmNhEeS1krHrX10kLw" name="LegacyStyledElement">
+        <modelElement href="Outlier%20Detection.uml#_uNjwAmNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <visibility xmi:id="_uQWlX2NhEeS1krHrX10kLw" label="+"/>
+      <cardinality xmi:id="_uQWlYGNhEeS1krHrX10kLw" label="1" max="1" min="1"/>
+      <type xmi:id="_uQWlYWNhEeS1krHrX10kLw" name="WriteRead">
+        <modelElement href="Outlier%20Detection.uml#_uLc3MGNhEeS1krHrX10kLw"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_uQWlYmNhEeS1krHrX10kLw" name="files">
+      <modelElement href="Outlier%20Detection.uml#_uNjwA2NhEeS1krHrX10kLw"/>
+      <stereotypes xmi:id="_uQWlY2NhEeS1krHrX10kLw" name="LegacyStyledElement">
+        <modelElement href="Outlier%20Detection.uml#_uNkXEGNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <stereotypes xmi:id="_uQWlZGNhEeS1krHrX10kLw" name="LegacyStyledElement">
+        <modelElement href="Outlier%20Detection.uml#_uNkXEGNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <visibility xmi:id="_uQWlZWNhEeS1krHrX10kLw" label="+"/>
+      <cardinality xmi:id="_uQWlZmNhEeS1krHrX10kLw" label="1..*" max="-1" min="1"/>
+      <type xmi:id="_uQWlZ2NhEeS1krHrX10kLw" name="File">
+        <modelElement href="Outlier%20Detection.uml#_uM0wMmNhEeS1krHrX10kLw"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_uQWlaGNhEeS1krHrX10kLw" name="fm">
+      <modelElement href="Outlier%20Detection.uml#_uNkXEWNhEeS1krHrX10kLw"/>
+      <stereotypes xmi:id="_uQWlaWNhEeS1krHrX10kLw" name="LegacyStyledElement">
+        <modelElement href="Outlier%20Detection.uml#_uNkXEmNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <stereotypes xmi:id="_uQWlamNhEeS1krHrX10kLw" name="LegacyStyledElement">
+        <modelElement href="Outlier%20Detection.uml#_uNkXEmNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <visibility xmi:id="_uQWla2NhEeS1krHrX10kLw" label="+"/>
+      <cardinality xmi:id="_uQWlbGNhEeS1krHrX10kLw" label="1" max="1" min="1"/>
+      <type xmi:id="_uQWlbWNhEeS1krHrX10kLw" name="FileManager">
+        <modelElement href="Outlier%20Detection.uml#_uLRRAGNhEeS1krHrX10kLw"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_uQWlbmNhEeS1krHrX10kLw" name="run">
+      <modelElement href="Outlier%20Detection.uml#_uLZz4GNhEeS1krHrX10kLw"/>
+      <visibility xmi:id="_uQWlb2NhEeS1krHrX10kLw" label="+"/>
+    </operations>
+    <operations xmi:id="_uQWlcGNhEeS1krHrX10kLw" name="ThreadWriter">
+      <modelElement href="Outlier%20Detection.uml#_uNWUoGNhEeS1krHrX10kLw"/>
+      <keywords xmi:id="_uQWlcWNhEeS1krHrX10kLw" keyword="create"/>
+      <visibility xmi:id="_uQWlcmNhEeS1krHrX10kLw" label="+"/>
+      <outParameters xmi:id="_uQWlc2NhEeS1krHrX10kLw">
+        <modelElement href="Outlier%20Detection.uml#_uNWUpmNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uQWldGNhEeS1krHrX10kLw" name="ThreadWriter">
+          <modelElement href="Outlier%20Detection.uml#_uLYlwGNhEeS1krHrX10kLw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_uQWldWNhEeS1krHrX10kLw" name="wr">
+        <modelElement href="Outlier%20Detection.uml#_uNWUoWNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uQWldmNhEeS1krHrX10kLw" name="WriteRead">
+          <modelElement href="Outlier%20Detection.uml#_uLc3MGNhEeS1krHrX10kLw"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_uQWld2NhEeS1krHrX10kLw" name="files">
+        <modelElement href="Outlier%20Detection.uml#_uNWUomNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uQWleGNhEeS1krHrX10kLw" name="List">
+          <modelElement href="Outlier%20Detection.uml#_uMsNUWNhEeS1krHrX10kLw"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_uQWleWNhEeS1krHrX10kLw" name="fm">
+        <modelElement href="Outlier%20Detection.uml#_uNWUo2NhEeS1krHrX10kLw"/>
+        <type xmi:id="_uQWlemNhEeS1krHrX10kLw" name="FileManager">
+          <modelElement href="Outlier%20Detection.uml#_uLRRAGNhEeS1krHrX10kLw"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_uQcE6WNhEeS1krHrX10kLw" name="ThreadReader" associationsOut="_uQZooGNhEeS1krHrX10kLw _uQcE4GNhEeS1krHrX10kLw">
+    <modelElement href="Outlier%20Detection.uml#_uLU7YGNhEeS1krHrX10kLw"/>
+    <visualProperties xmi:id="_uQcE6mNhEeS1krHrX10kLw" position="-29.0,47.0" size="195.0,115.0"/>
+    <visibility xmi:id="_uQcE62NhEeS1krHrX10kLw" label="+"/>
+    <attributes xmi:id="_uQcE7GNhEeS1krHrX10kLw" name="wr">
+      <modelElement href="Outlier%20Detection.uml#_uNih4WNhEeS1krHrX10kLw"/>
+      <stereotypes xmi:id="_uQcE7WNhEeS1krHrX10kLw" name="LegacyStyledElement">
+        <modelElement href="Outlier%20Detection.uml#_uNjI8GNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <stereotypes xmi:id="_uQbd0GNhEeS1krHrX10kLw" name="LegacyStyledElement">
+        <modelElement href="Outlier%20Detection.uml#_uNjI8GNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <visibility xmi:id="_uQcE7mNhEeS1krHrX10kLw" label="+"/>
+      <cardinality xmi:id="_uQcE72NhEeS1krHrX10kLw" label="1" max="1" min="1"/>
+      <type xmi:id="_uQcE8GNhEeS1krHrX10kLw" name="WriteRead">
+        <modelElement href="Outlier%20Detection.uml#_uLc3MGNhEeS1krHrX10kLw"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_uQcE8WNhEeS1krHrX10kLw" name="key">
+      <modelElement href="Outlier%20Detection.uml#_uNjI8WNhEeS1krHrX10kLw"/>
+      <stereotypes xmi:id="_uQcE8mNhEeS1krHrX10kLw" name="LegacyStyledElement">
+        <modelElement href="Outlier%20Detection.uml#_uNjI8mNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <visibility xmi:id="_uQcE82NhEeS1krHrX10kLw" label="+"/>
+      <cardinality xmi:id="_uQcE9GNhEeS1krHrX10kLw" label="1" max="1" min="1"/>
+      <type xmi:id="_uQcE9WNhEeS1krHrX10kLw" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_uQcE9mNhEeS1krHrX10kLw" name="algorithm">
+      <modelElement href="Outlier%20Detection.uml#_uNjI82NhEeS1krHrX10kLw"/>
+      <stereotypes xmi:id="_uQcE92NhEeS1krHrX10kLw" name="LegacyStyledElement">
+        <modelElement href="Outlier%20Detection.uml#_uNjwAGNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <stereotypes xmi:id="_uQcE-GNhEeS1krHrX10kLw" name="LegacyStyledElement">
+        <modelElement href="Outlier%20Detection.uml#_uNjwAGNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <visibility xmi:id="_uQcE-WNhEeS1krHrX10kLw" label="+"/>
+      <cardinality xmi:id="_uQcE-mNhEeS1krHrX10kLw" label="1" max="1" min="1"/>
+      <type xmi:id="_uQcE-2NhEeS1krHrX10kLw" name="Algorithm">
+        <modelElement href="Outlier%20Detection.uml#_uKqNAGNhEeS1krHrX10kLw"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_uQcE_GNhEeS1krHrX10kLw" name="run">
+      <modelElement href="Outlier%20Detection.uml#_uLWJgGNhEeS1krHrX10kLw"/>
+      <visibility xmi:id="_uQcE_WNhEeS1krHrX10kLw" label="+"/>
+    </operations>
+    <operations xmi:id="_uQcE_mNhEeS1krHrX10kLw" name="ThreadReader">
+      <modelElement href="Outlier%20Detection.uml#_uM5osGNhEeS1krHrX10kLw"/>
+      <keywords xmi:id="_uQcE_2NhEeS1krHrX10kLw" keyword="create"/>
+      <visibility xmi:id="_uQcFAGNhEeS1krHrX10kLw" label="+"/>
+      <outParameters xmi:id="_uQcFAWNhEeS1krHrX10kLw">
+        <modelElement href="Outlier%20Detection.uml#_uM6PwmNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uQcFAmNhEeS1krHrX10kLw" name="ThreadReader">
+          <modelElement href="Outlier%20Detection.uml#_uLU7YGNhEeS1krHrX10kLw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_uQcFA2NhEeS1krHrX10kLw" name="wr">
+        <modelElement href="Outlier%20Detection.uml#_uM5osWNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uQcFBGNhEeS1krHrX10kLw" name="WriteRead">
+          <modelElement href="Outlier%20Detection.uml#_uLc3MGNhEeS1krHrX10kLw"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_uQcFBWNhEeS1krHrX10kLw" name="key">
+        <modelElement href="Outlier%20Detection.uml#_uM5osmNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uQcFBmNhEeS1krHrX10kLw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_uQcFB2NhEeS1krHrX10kLw" name="algorithm">
+        <modelElement href="Outlier%20Detection.uml#_uM5os2NhEeS1krHrX10kLw"/>
+        <type xmi:id="_uQcFCGNhEeS1krHrX10kLw" name="Algorithm">
+          <modelElement href="Outlier%20Detection.uml#_uKqNAGNhEeS1krHrX10kLw"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_uQr8iWNhEeS1krHrX10kLw" name="WriteRead" associationsIn="_uQZooGNhEeS1krHrX10kLw _uQVXMGNhEeS1krHrX10kLw" associationsOut="_uQknwGNhEeS1krHrX10kLw _uQquYGNhEeS1krHrX10kLw _uQrVcGNhEeS1krHrX10kLw _uQr8gGNhEeS1krHrX10kLw">
+    <modelElement href="Outlier%20Detection.uml#_uLc3MGNhEeS1krHrX10kLw"/>
+    <visualProperties xmi:id="_uQr8imNhEeS1krHrX10kLw" position="57.0,-409.0" size="279.0,402.0"/>
+    <visibility xmi:id="_uQr8i2NhEeS1krHrX10kLw" label="+"/>
+    <attributes xmi:id="_uQr8jGNhEeS1krHrX10kLw" defaultValue="new ReentrantReadWriteLock()" name="rwl">
+      <modelElement href="Outlier%20Detection.uml#_uNk-IGNhEeS1krHrX10kLw"/>
+      <stereotypes xmi:id="_uQr8jWNhEeS1krHrX10kLw" name="LegacyStyledElement">
+        <modelElement href="Outlier%20Detection.uml#_uNk-ImNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <stereotypes xmi:id="_uQr8jmNhEeS1krHrX10kLw" name="LegacyStyledElement">
+        <modelElement href="Outlier%20Detection.uml#_uNk-ImNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <visibility xmi:id="_uQr8j2NhEeS1krHrX10kLw" label="-"/>
+      <cardinality xmi:id="_uQr8kGNhEeS1krHrX10kLw" label="1" max="1" min="1"/>
+      <type xmi:id="_uQr8kWNhEeS1krHrX10kLw" name="ReentrantReadWriteLock">
+        <modelElement href="Outlier%20Detection.uml#_uM8sAWNhEeS1krHrX10kLw"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_uQr8kmNhEeS1krHrX10kLw" defaultValue="rwl.readLock()" name="r">
+      <modelElement href="Outlier%20Detection.uml#_uNllMGNhEeS1krHrX10kLw"/>
+      <stereotypes xmi:id="_uQr8k2NhEeS1krHrX10kLw" name="LegacyStyledElement">
+        <modelElement href="Outlier%20Detection.uml#_uNllMmNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <stereotypes xmi:id="_uQr8lGNhEeS1krHrX10kLw" name="LegacyStyledElement">
+        <modelElement href="Outlier%20Detection.uml#_uNllMmNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <visibility xmi:id="_uQr8lWNhEeS1krHrX10kLw" label="-"/>
+      <cardinality xmi:id="_uQr8lmNhEeS1krHrX10kLw" label="1" max="1" min="1"/>
+      <type xmi:id="_uQr8l2NhEeS1krHrX10kLw" name="Lock">
+        <modelElement href="Outlier%20Detection.uml#_uM8E8GNhEeS1krHrX10kLw"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_uQr8mGNhEeS1krHrX10kLw" defaultValue="rwl.writeLock()" name="w">
+      <modelElement href="Outlier%20Detection.uml#_uNllM2NhEeS1krHrX10kLw"/>
+      <stereotypes xmi:id="_uQr8mWNhEeS1krHrX10kLw" name="LegacyStyledElement">
+        <modelElement href="Outlier%20Detection.uml#_uNmMQGNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <stereotypes xmi:id="_uQr8mmNhEeS1krHrX10kLw" name="LegacyStyledElement">
+        <modelElement href="Outlier%20Detection.uml#_uNmMQGNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <visibility xmi:id="_uQr8m2NhEeS1krHrX10kLw" label="-"/>
+      <cardinality xmi:id="_uQr8nGNhEeS1krHrX10kLw" label="1" max="1" min="1"/>
+      <type xmi:id="_uQr8nWNhEeS1krHrX10kLw" name="Lock">
+        <modelElement href="Outlier%20Detection.uml#_uM8E8GNhEeS1krHrX10kLw"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_uQr8nmNhEeS1krHrX10kLw" name="info">
+      <modelElement href="Outlier%20Detection.uml#_uNmMQWNhEeS1krHrX10kLw"/>
+      <stereotypes xmi:id="_uQr8n2NhEeS1krHrX10kLw" name="Generics">
+        <modelElement href="Outlier%20Detection.uml#_uNmMQmNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <stereotypes xmi:id="_uQr8oGNhEeS1krHrX10kLw" name="LegacyStyledElement">
+        <modelElement href="Outlier%20Detection.uml#_uNmzUGNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <stereotypes xmi:id="_uQpgRGNhEeS1krHrX10kLw" name="Generics">
+        <modelElement href="Outlier%20Detection.uml#_uNmMQmNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <stereotypes xmi:id="_uQpgRWNhEeS1krHrX10kLw" name="LegacyStyledElement">
+        <modelElement href="Outlier%20Detection.uml#_uNmzUGNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <visibility xmi:id="_uQr8oWNhEeS1krHrX10kLw" label="+"/>
+      <cardinality xmi:id="_uQr8omNhEeS1krHrX10kLw" label="1" max="1" min="1"/>
+      <type xmi:id="_uQr8o2NhEeS1krHrX10kLw" name="HashMap">
+        <modelElement href="Outlier%20Detection.uml#_uM3zgGNhEeS1krHrX10kLw"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_uQr8pGNhEeS1krHrX10kLw" name="controlRead">
+      <modelElement href="Outlier%20Detection.uml#_uNmzUWNhEeS1krHrX10kLw"/>
+      <stereotypes xmi:id="_uQr8pWNhEeS1krHrX10kLw" name="LegacyStyledElement">
+        <modelElement href="Outlier%20Detection.uml#_uNmzUmNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <visibility xmi:id="_uQr8pmNhEeS1krHrX10kLw" label="+"/>
+      <cardinality xmi:id="_uQr8p2NhEeS1krHrX10kLw" label="1" max="1" min="1"/>
+      <type xmi:id="_uQr8qGNhEeS1krHrX10kLw" name="boolean">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_uQr8qWNhEeS1krHrX10kLw" name="needValues">
+      <modelElement href="Outlier%20Detection.uml#_uNmzU2NhEeS1krHrX10kLw"/>
+      <stereotypes xmi:id="_uQr8qmNhEeS1krHrX10kLw" name="LegacyStyledElement">
+        <modelElement href="Outlier%20Detection.uml#_uNnaYGNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <visibility xmi:id="_uQr8q2NhEeS1krHrX10kLw" label="+"/>
+      <cardinality xmi:id="_uQr8rGNhEeS1krHrX10kLw" label="1" max="1" min="1"/>
+      <type xmi:id="_uQr8rWNhEeS1krHrX10kLw" name="boolean">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_uQr8rmNhEeS1krHrX10kLw" name="keysExist">
+      <modelElement href="Outlier%20Detection.uml#_uNnaYWNhEeS1krHrX10kLw"/>
+      <stereotypes xmi:id="_uQr8r2NhEeS1krHrX10kLw" name="LegacyStyledElement">
+        <modelElement href="Outlier%20Detection.uml#_uNnaYmNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <visibility xmi:id="_uQr8sGNhEeS1krHrX10kLw" label="+"/>
+      <cardinality xmi:id="_uQr8sWNhEeS1krHrX10kLw" label="1" max="1" min="1"/>
+      <type xmi:id="_uQr8smNhEeS1krHrX10kLw" name="boolean">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_uQr8s2NhEeS1krHrX10kLw" name="count">
+      <modelElement href="Outlier%20Detection.uml#_uNoBcGNhEeS1krHrX10kLw"/>
+      <stereotypes xmi:id="_uQr8tGNhEeS1krHrX10kLw" name="LegacyStyledElement">
+        <modelElement href="Outlier%20Detection.uml#_uNoBcWNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <visibility xmi:id="_uQr8tWNhEeS1krHrX10kLw" label="+"/>
+      <cardinality xmi:id="_uQr8tmNhEeS1krHrX10kLw" label="1" max="1" min="1"/>
+      <type xmi:id="_uQr8t2NhEeS1krHrX10kLw" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_uQr8uGNhEeS1krHrX10kLw" name="winsize">
+      <modelElement href="Outlier%20Detection.uml#_uNoBcmNhEeS1krHrX10kLw"/>
+      <stereotypes xmi:id="_uQr8uWNhEeS1krHrX10kLw" name="LegacyStyledElement">
+        <modelElement href="Outlier%20Detection.uml#_uNoBc2NhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <visibility xmi:id="_uQr8umNhEeS1krHrX10kLw" label="+"/>
+      <cardinality xmi:id="_uQr8u2NhEeS1krHrX10kLw" label="1" max="1" min="1"/>
+      <type xmi:id="_uQr8vGNhEeS1krHrX10kLw" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_uQr8vWNhEeS1krHrX10kLw" name="numOutliers">
+      <modelElement href="Outlier%20Detection.uml#_uNoogGNhEeS1krHrX10kLw"/>
+      <stereotypes xmi:id="_uQr8vmNhEeS1krHrX10kLw" name="LegacyStyledElement">
+        <modelElement href="Outlier%20Detection.uml#_uNoogWNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <visibility xmi:id="_uQr8v2NhEeS1krHrX10kLw" label="+"/>
+      <cardinality xmi:id="_uQr8wGNhEeS1krHrX10kLw" label="1" max="1" min="1"/>
+      <type xmi:id="_uQr8wWNhEeS1krHrX10kLw" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_uQr8wmNhEeS1krHrX10kLw" name="nameFile">
+      <modelElement href="Outlier%20Detection.uml#_uNoogmNhEeS1krHrX10kLw"/>
+      <stereotypes xmi:id="_uQr8w2NhEeS1krHrX10kLw" name="LegacyStyledElement">
+        <modelElement href="Outlier%20Detection.uml#_uNoog2NhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <visibility xmi:id="_uQr8xGNhEeS1krHrX10kLw" label="+"/>
+      <cardinality xmi:id="_uQr8xWNhEeS1krHrX10kLw" label="1" max="1" min="1"/>
+      <type xmi:id="_uQr8xmNhEeS1krHrX10kLw" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_uQr8x2NhEeS1krHrX10kLw" name="getInfo">
+      <modelElement href="Outlier%20Detection.uml#_uLesYGNhEeS1krHrX10kLw"/>
+      <stereotypes xmi:id="_uQr8yGNhEeS1krHrX10kLw" name="Generics">
+        <modelElement href="Outlier%20Detection.uml#_uLesYWNhEeS1krHrX10kLw"/>
+      </stereotypes>
+      <visibility xmi:id="_uQr8yWNhEeS1krHrX10kLw" label="+"/>
+      <outParameters xmi:id="_uQr8ymNhEeS1krHrX10kLw">
+        <modelElement href="Outlier%20Detection.uml#_uNYw4WNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uQr8y2NhEeS1krHrX10kLw" name="HashMap">
+          <modelElement href="Outlier%20Detection.uml#_uM3zgGNhEeS1krHrX10kLw"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_uQr8zGNhEeS1krHrX10kLw" name="isControlRead">
+      <modelElement href="Outlier%20Detection.uml#_uLfTcGNhEeS1krHrX10kLw"/>
+      <visibility xmi:id="_uQr8zWNhEeS1krHrX10kLw" label="+"/>
+      <outParameters xmi:id="_uQr8zmNhEeS1krHrX10kLw">
+        <modelElement href="Outlier%20Detection.uml#_uLfTcWNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uQr8z2NhEeS1krHrX10kLw" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_uQr80GNhEeS1krHrX10kLw" name="isNeedValues">
+      <modelElement href="Outlier%20Detection.uml#_uLfTcmNhEeS1krHrX10kLw"/>
+      <visibility xmi:id="_uQr80WNhEeS1krHrX10kLw" label="+"/>
+      <outParameters xmi:id="_uQr80mNhEeS1krHrX10kLw">
+        <modelElement href="Outlier%20Detection.uml#_uLf6gGNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uQr802NhEeS1krHrX10kLw" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_uQr81GNhEeS1krHrX10kLw" name="isKeysExist">
+      <modelElement href="Outlier%20Detection.uml#_uLf6gWNhEeS1krHrX10kLw"/>
+      <visibility xmi:id="_uQr81WNhEeS1krHrX10kLw" label="+"/>
+      <outParameters xmi:id="_uQr81mNhEeS1krHrX10kLw">
+        <modelElement href="Outlier%20Detection.uml#_uLf6gmNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uQr812NhEeS1krHrX10kLw" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_uQr82GNhEeS1krHrX10kLw" name="main" staticOperation="true">
+      <modelElement href="Outlier%20Detection.uml#_uLhIoGNhEeS1krHrX10kLw"/>
+      <visibility xmi:id="_uQr82WNhEeS1krHrX10kLw" label="+"/>
+      <parameters xmi:id="_uQr82mNhEeS1krHrX10kLw" name="args">
+        <modelElement href="Outlier%20Detection.uml#_uLhIoWNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uQr822NhEeS1krHrX10kLw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_uQr83GNhEeS1krHrX10kLw" name="compute">
+      <modelElement href="Outlier%20Detection.uml#_uM96IGNhEeS1krHrX10kLw"/>
+      <visibility xmi:id="_uQr83WNhEeS1krHrX10kLw" label="+"/>
+      <parameters xmi:id="_uQr83mNhEeS1krHrX10kLw" name="key">
+        <modelElement href="Outlier%20Detection.uml#_uM96IWNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uQr832NhEeS1krHrX10kLw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_uQr84GNhEeS1krHrX10kLw" name="algorithm">
+        <modelElement href="Outlier%20Detection.uml#_uM-hMGNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uQr84WNhEeS1krHrX10kLw" name="Algorithm">
+          <modelElement href="Outlier%20Detection.uml#_uKqNAGNhEeS1krHrX10kLw"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_uQr84mNhEeS1krHrX10kLw" name="WriteRead">
+      <modelElement href="Outlier%20Detection.uml#_uNYJ0GNhEeS1krHrX10kLw"/>
+      <keywords xmi:id="_uQr842NhEeS1krHrX10kLw" keyword="create"/>
+      <visibility xmi:id="_uQr85GNhEeS1krHrX10kLw" label="+"/>
+      <outParameters xmi:id="_uQr85WNhEeS1krHrX10kLw">
+        <modelElement href="Outlier%20Detection.uml#_uNYJ1WNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uQr85mNhEeS1krHrX10kLw" name="WriteRead">
+          <modelElement href="Outlier%20Detection.uml#_uLc3MGNhEeS1krHrX10kLw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_uQr852NhEeS1krHrX10kLw" name="info">
+        <modelElement href="Outlier%20Detection.uml#_uNYJ0WNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uQr86GNhEeS1krHrX10kLw" name="HashMap">
+          <modelElement href="Outlier%20Detection.uml#_uM3zgGNhEeS1krHrX10kLw"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_uQr86WNhEeS1krHrX10kLw" name="winsize">
+        <modelElement href="Outlier%20Detection.uml#_uNYJ0mNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uQr86mNhEeS1krHrX10kLw" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_uQr862NhEeS1krHrX10kLw" name="write">
+      <modelElement href="Outlier%20Detection.uml#_uNZX8mNhEeS1krHrX10kLw"/>
+      <visibility xmi:id="_uQr87GNhEeS1krHrX10kLw" label="+"/>
+      <parameters xmi:id="_uQr87WNhEeS1krHrX10kLw" name="file">
+        <modelElement href="Outlier%20Detection.uml#_uNZ_AGNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uQr87mNhEeS1krHrX10kLw" name="File">
+          <modelElement href="Outlier%20Detection.uml#_uM0wMmNhEeS1krHrX10kLw"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_uQr872NhEeS1krHrX10kLw" name="writer">
+        <modelElement href="Outlier%20Detection.uml#_uNZ_AWNhEeS1krHrX10kLw"/>
+        <type xmi:id="_uQr88GNhEeS1krHrX10kLw" name="FileManager">
+          <modelElement href="Outlier%20Detection.uml#_uLRRAGNhEeS1krHrX10kLw"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+</com.yattasolutions.uml.diagrams.classifier:ClassDiagram>
