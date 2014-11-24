@@ -6,7 +6,7 @@
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="1"/>
 </listAttribute>
-<stringAttribute key="org.eclipse.debug.ui.ATTR_CAPTURE_IN_FILE" value="/Users/alvaro/Documents/TUGraz/Master Thesis/outputs/WS20/Knn_high_0.95"/>
+<stringAttribute key="org.eclipse.debug.ui.ATTR_CAPTURE_IN_FILE" value="/Users/alvaro/Documents/TUGraz/Master Thesis/outputs/Experimento B/WS10/Messi_Hull_1.9"/>
 <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="WriteRead"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="Outlier Detection"/>

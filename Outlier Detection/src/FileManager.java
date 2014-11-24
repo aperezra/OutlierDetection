@@ -125,6 +125,17 @@ public class FileManager {
 			
 		}
 		Collections.sort(files);
+//		List<File> newfiles = new ArrayList<File>();
+//		int j=0;
+//		for(File file: files){
+//			if (file.getName().equals("pagecounts-20110308-000000")){
+//				j=files.indexOf(file);
+//			}
+//		}
+//		for(int i=j; i<files.size();i++){
+//			newfiles.add(files.get(i));
+//		}
+//		Collections.sort(newfiles);
 		return files;
 
 

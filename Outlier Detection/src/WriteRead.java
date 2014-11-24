@@ -53,9 +53,9 @@ public class WriteRead {
 		try{
 			nameFile=file.getName();
 			writer.parse(file, this.info);
-			System.out.println(i++ + " Gossip_girl " +  info.get("de Gossip_Girl"));
-			System.out.println("Internet " +  info.get("es Internet"));
-			System.out.println("Main_page " +  info.get("en Main_Page"));
+			System.out.println(i++ + " es Lionel_Messi " +  info.get("es Lionel_Messi"));
+			System.out.println("de Lionel_Messi " +  info.get("de Lionel_Messi"));
+			System.out.println("en Lionel_Messil " +  info.get("en Lionel_Messi"));
 			keysExist=true;
 			try{
 				Thread.sleep(500);
@@ -64,7 +64,7 @@ public class WriteRead {
 			}
 		}
 		finally{
-			if(this.info.get("de *NSYNC").size()>winsize){
+			if(this.info.get("de Ballon_d%E2%80%99Or").size()>winsize){
 				needValues=false;
 				w.unlock();
 			}
@@ -75,27 +75,48 @@ public class WriteRead {
 		r.lock();
 		try{
 			algorithm.calculate(info.get(key));
-			if (key.equals("de Gossip_Girl")&& Double.compare(algorithm.probOutlier(),0.95)>0){
+			if (key.equals("es Lionel_Messii")&& Double.compare(algorithm.probOutlier(),1.9)>0 ){
 				numOutliersA++;
-				System.out.println(numOutliersA + " "+nameFile + " "+ key);
-				System.out.println("outlier: "+algorithm.toString());
-				System.out.println(info.get(key));
-				System.out.println("¡YA!");
+				System.out.println(numOutliersA + " "+nameFile + " "+ key + "\n" + " outlier: " +algorithm.toString() + "\n" + info.get(key) + "\n" + "FIN" );
+//				System.out.println("outlier: "+algorithm.toString());
+//				System.out.println(info.get(key));
+//				System.out.println("¡YA!");
 			}
-			if (key.equals("en Main_Page")&& Double.compare(algorithm.probOutlier(),0.95)>0){
+			if (key.equals("de Lionel_Messi")&& Double.compare(algorithm.probOutlier(),1.9)>0 ){
 				numOutliersB++;
-				System.out.println(numOutliersB + " "+nameFile + " "+ key);
-				System.out.println("outlier: "+algorithm.toString());
-				System.out.println(info.get(key));
-				System.out.println("¡YA!");
+				System.out.println(numOutliersA + " "+nameFile + " "+ key + "\n" + " outlier: " +algorithm.toString() + "\n" + info.get(key) + "\n" + "FIN" );
+//				System.out.println("outlier: "+algorithm.toString());
+//				System.out.println(info.get(key));
+//				System.out.println("¡YA!");
 			}
-			if (key.equals("es Internet")&& Double.compare(algorithm.probOutlier(),0.95)>0){
+			if (key.equals("en Lionel_Messi")&& Double.compare(algorithm.probOutlier(),1.9)>0){
 				numOutliersC++;
-				System.out.println(numOutliersC + " "+nameFile + " "+ key);
-				System.out.println("outlier: "+algorithm.toString());
-				System.out.println(info.get(key));
-				System.out.println("¡YA!");
+				System.out.println(numOutliersA + " "+nameFile + " "+ key + "\n" + " outlier: " +algorithm.toString() + "\n" + info.get(key) + "\n" + "FIN" );
+//				System.out.println("outlier: "+algorithm.toString());
+//				System.out.println(info.get(key));
+//				System.out.println("¡YA!");
 			}
+//			if (key.equals("es Fukushima")&& Double.compare(algorithm.probOutlier(),3)>0 ){
+//				numOutliersA++;
+//				System.out.println(numOutliersA + " "+nameFile + " "+ key + "\n" + " outlier: " +algorithm.toString() + "\n" + info.get(key) + "\n" + "FIN" );
+////				System.out.println("outlier: "+algorithm.toString());
+////				System.out.println(info.get(key));
+////				System.out.println("¡YA!");
+//			}
+//			if (key.equals("en Fukushima")&& Double.compare(algorithm.probOutlier(),3)>0){
+//				numOutliersC++;
+//				System.out.println(numOutliersA + " "+nameFile + " "+ key + "\n" + " outlier: " +algorithm.toString() + "\n" + info.get(key) + "\n" + "FIN" );
+////				System.out.println("outlier: "+algorithm.toString());
+////				System.out.println(info.get(key));
+////				System.out.println("¡YA!");
+//			}
+//			if (key.equals("de Fukushima")&& Double.compare(algorithm.probOutlier(),3)>0 ){
+//				numOutliersA++;
+//				System.out.println(numOutliersA + " "+nameFile + " "+ key + "\n" + " outlier: " +algorithm.toString() + "\n" + info.get(key) + "\n" + "FIN" );
+////				System.out.println("outlier: "+algorithm.toString());
+////				System.out.println(info.get(key));
+////				System.out.println("¡YA!");
+//			}
 			info.get(key).removeFirst();
 			count++;
 			if(count==info.keySet().size()-1){
@@ -115,9 +136,9 @@ public class WriteRead {
 		}
 	}
 	public static void main (String[] args){
-		WriteRead wr = new WriteRead(new HashMap<String, Deque<Integer>>(),20);
+		WriteRead wr = new WriteRead(new HashMap<String, Deque<Integer>>(),10);
 		FileManager fm = new FileManager();
-		String rootDirectory = "/Users/alvaro/Documents/TUGraz/Master Thesis/subsets/subset";
+		String rootDirectory = "/Users/alvaro/Documents/TUGraz/Master Thesis/subsets/trendSubset";
 		List<File> files = fm.listDirectories(rootDirectory);
 		while(files.isEmpty()){
 			try {

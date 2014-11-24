@@ -53,70 +53,90 @@ public class Hull implements Algorithm{
 	public double probOutlier() {
 		double size=hulls.size();
 		int index=hulls.indexOf(value);
-
+		double os = 0;
 		if(index==0){ 
-			if(hulls.get(index+1)>hulls.get(index)+sigma){
-				return 1.5;
-			}
 			if(hulls.get(index+1)>hulls.get(index)+2*sigma){
-				return 2.0;
+				os= 2.0;
 			}
 			else{
-				return 1.0;
+				if(hulls.get(index+1)>hulls.get(index)+sigma){
+
+					os= 1.75;
+				}
+				else{
+
+					os= 1.5;
+				}
 			}
 		}
 		if(index==1){
-			if(hulls.get(index-1)>hulls.get(index)+sigma){
-				return 1.0; 
-			}
 			if(hulls.get(index-1)>hulls.get(index)+2*sigma){
-				return 0.75;
+
+				os= 0.75;
 			}
 			else{
-				return 1.5;
+				if(hulls.get(index-1)>hulls.get(index)+sigma){
+
+					os= 1.0; 
+				}
+
+				else{
+
+					os= 1.5;
+				}
 			}
 		}
 		if(index==size-1){
-			if(hulls.get(index-1)<hulls.get(index)+sigma){
-				return 1.5; 
-			}
-			if(hulls.get(index-1)<hulls.get(index)+2*sigma){
-				return 2.0;
+//			System.out.println("Aqui estoy " + this.sigma +" "+ hulls.get(index)+" " + hulls.get(index-1) +  " resta " + (hulls.get(index)-hulls.get(index-1)));
+//			System.out.println((Double.compare((double)hulls.get(index-1)+2*sigma,(double)hulls.get(index))));
+			if(Double.compare((double)hulls.get(index-1)+2*sigma,(double)hulls.get(index))<0){
+				os= 2.0;
 			}
 			else{
-				return 1.0;
+				if(hulls.get(index-1)+sigma<hulls.get(index)){
+
+					os= 1.75; 
+				}
+
+				else{
+					os= 1.5;
+				}
 			}
 		}	
 		if(index==size-2){
-			if(hulls.get(index+1)>hulls.get(index)+sigma){
-				return 1.0;
-			}
 			if(hulls.get(index+1)>hulls.get(index)+2*sigma){
-				return 0.75;
+				os= 0.75;
 			}
 			else{
-				return 1.5;
+				if(hulls.get(index+1)>hulls.get(index)+sigma){
+					os= 1.0;
+				}
+				else{
+					os= 1.5;
+				}
 			}
 		}
-		return 0.0;
+		//if( os>1.5)System.out.println(" outlier score "+ os);
+		return os;
+
 	} 
 
 
 	@Override
 	public void calculate(Deque<Integer> data){
-		CopyOnWriteArrayList<Integer> list = new CopyOnWriteArrayList<Integer>(data);
 		hulls.clear();
+		CopyOnWriteArrayList<Integer> list = new CopyOnWriteArrayList<Integer>(data);
+		hulls.addAll(list);
+		Collections.sort(hulls);
 		list.remove(list.size()-1);
 		DescriptiveStats ds = new DescriptiveStats(list);
 		this.sigma = ds.getStandardDev(ds.getMean());
 		this.value = data.getLast();
-		hulls.addAll(list);
-		Collections.sort(hulls);
 	}
 
 	@Override
 	public String toString(){
-		return this.hulls.toString() + " " + value;
+		return this.hulls.toString() + " " + value + " sigma "+ this.sigma;
 
 	}
 

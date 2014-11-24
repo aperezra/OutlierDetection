@@ -3,36 +3,36 @@
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="265" key="DIALOG_WIDTH"/>
 		<item value="135" key="DIALOG_Y_ORIGIN"/>
-		<item value="399" key="DIALOG_HEIGHT"/>
 		<item value="849" key="DIALOG_X_ORIGIN"/>
+		<item value="399" key="DIALOG_HEIGHT"/>
 		<item value="1|.Helvetica Neue DeskInterface|11.0|0|COCOA|1|.HelveticaNeueDeskInterface-Regular" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="true" key="wrap"/>
-		<item value="false" key="isRegEx"/>
 		<item value="false" key="casesensitive"/>
+		<item value="false" key="isRegEx"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="numOutl" key="selection"/>
+		<item value="" key="selection"/>
 		<list key="findhistory">
-			<item value="numOutl"/>
-			<item value="int k"/>
-			<item value="0.333"/>
-			<item value="System.out"/>
-			<item value="println"/>
-			<item value="System"/>
-			<item value="SYstem"/>
-			<item value="value"/>
+			<item value="alvaro"/>
+			<item value="1.9"/>
+			<item value="3"/>
+			<item value="0.95"/>
+			<item value="0.9"/>
+			<item value="4"/>
+			<item value="557"/>
+			<item value="2.0"/>
 		</list>
 		<list key="replacehistory">
+			<item value="3"/>
+			<item value="1.9"/>
+			<item value="0.9"/>
+			<item value="0.95"/>
+			<item value="os="/>
 			<item value="hull"/>
 			<item value=""/>
 			<item value="distances"/>
-			<item value="Deque"/>
-			<item value="values"/>
-			<item value="List"/>
-			<item value="list"/>
-			<item value="directories"/>
 		</list>
 	</section>
 </section>
